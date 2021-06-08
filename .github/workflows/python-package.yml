@@ -17,6 +17,7 @@ jobs:
       run: | 
         echo hi %1
         echo hellos
+        dir
         cd D:\a\giridemo\giridemo\plat-con-catman-adapter
         dir
 
