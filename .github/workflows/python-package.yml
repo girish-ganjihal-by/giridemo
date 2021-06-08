@@ -18,10 +18,9 @@ jobs:
         cd pycatmanadapter
         echo python -m pip install pyinstaller
         echo pyinstaller -p pycatmanadapter launch.py
-        echo xcopy  "config_repo"  "dist\launch\config_repo" /e /i /h
-        echo mkdir dist\launch\connect
-        echo mkdir dist\launch\connect\cps
-        cd dist\launch\connect\cps
+        xcopy  "config_repo"  "dist\launch\config_repo" /e /i /h
+        mkdir dist\launch\connect
+        mkdir dist\launch\connect\cps
         echo copy connect\cps\adapter-cps.json dist\launch\connect\cps\
         mkdir dist\launch\log
         mkdir dist\launch\log\archived
