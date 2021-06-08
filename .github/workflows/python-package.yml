@@ -14,7 +14,7 @@ jobs:
     - name: download git file
       uses: actions/checkout@v2
     - name: configuration changes
-      run: 
+      run: | 
         echo hi %1
         echo hello
 
