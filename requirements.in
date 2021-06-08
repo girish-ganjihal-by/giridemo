@@ -3,3 +3,4 @@ sphinx
 stomp.py
 joblib
 retry
+requests
