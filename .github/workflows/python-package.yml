@@ -24,4 +24,8 @@ jobs:
         echo copy connect\cps\adapter-cps.json dist\launch\connect\cps\
         mkdir dist\launch\log
         mkdir dist\launch\log\archived
+    - name: Test with pytest
+      run: |
+        pytest
+
 
