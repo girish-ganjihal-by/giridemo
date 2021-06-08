@@ -15,12 +15,9 @@ jobs:
       uses: actions/checkout@v2
     - name: configuration changes
       run: | 
-        echo hi %1
-        echo hellos
-        echo path of pycatmanadapter whereyou installed
-        dir
         cd pycatmanadapter
         python -m pip install pyinstaller
+        pyinstaller -p pycatmanadapter launch.py
         echo python -m pip install pyinstaller
         echo pyinstaller -p pycatmanadapter launch.py
         echo curl -v www.google.com
