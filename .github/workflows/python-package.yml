@@ -18,7 +18,7 @@ jobs:
         echo hi %1
         echo hellos
         dir
-        cd plat-con-catman-adapter
+        cd plat-con-catman-adapter/pycatmanadapter
         dir
         cmd "ping www.google.com"
-        curl --insecure --head  http://admin:admin@localhost:8161/admin/queues.jsp
+        curl  --head  http://admin:admin@localhost:8161
