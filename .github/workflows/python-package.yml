@@ -16,6 +16,7 @@ jobs:
     - name: configuration changes
       run: |
         pip install flake8 pytest
+        pip install requests
         cd pycatmanadapter
         python -m pip install pyinstaller
         pyinstaller -p pycatmanadapter launch.py
