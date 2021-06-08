@@ -1,0 +1,30 @@
+{
+  "header": {
+    "sender": "SAP.EEPCLNT100",
+    "receiver": [
+      "CATMAN.GLOBAL"
+    ],
+    "model": "BYDM",
+    "messageVersion": "BYDM 2020.2.0",
+    "messageId": "2401706b-67fc-423c-8480-2ce9cc61b6c2",
+    "type": "item",
+    "creationDateAndTime": "2021-03-01T01:45:48.001+05:30"
+  },
+  "item": [
+    {
+      "creationDateTime": "2021-03-01T01:45:49.161+05:30",
+      "documentStatusCode": "ORIGINAL",
+      "documentActionCode": "CHANGE_BY_REFRESH",
+      "senderDocumentId": "0000000932905845",
+      "itemId": {
+        "primaryId": "278802"
+      },
+      "financialInformation": {
+        "unitCost": {
+          "value": 1599.00,
+          "currencyCode": "NOK"
+        }
+      }
+    }
+  ]
+}

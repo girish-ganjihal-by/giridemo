@@ -1,0 +1,2 @@
+class MessageStoreConnectionError(Exception):
+    pass

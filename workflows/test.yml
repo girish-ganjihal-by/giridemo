@@ -1,0 +1,17 @@
+name: tests
+on: [push]
+jobs:
+  run-pytest:
+    runs-on: ubuntu-20.04
+    timeout-minutes: 10
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: install requirements
+        run: python -m pip install -r requirements.in -r test-requirements.in
+      - name: run pytest
+        run: pytest

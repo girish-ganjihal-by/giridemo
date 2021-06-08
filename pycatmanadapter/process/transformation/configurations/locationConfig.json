@@ -1,0 +1,68 @@
+{
+  "coreMappings" : [
+    {
+      "segmentMapping" : {
+        "sourceSegment": "location",
+        "targetSegment": "store",
+        "fieldMapping": [
+            {
+             "sourceField": "basicLocation.locationName",
+             "targetField": "Name"
+            },
+           {
+             "sourceField": "locationId",
+             "targetField": "StoreNumber"
+           },
+           {
+             "sourceField": "basicLocation.address.streetAddressOne",
+             "targetField": "Address1"
+           },
+          {
+             "sourceField": "basicLocation.address.streetAddressTwo",
+             "targetField": "Address2"
+          },
+          {
+             "sourceField": "basicLocation.address.city",
+             "targetField": "AddressCity"
+          },
+          {
+             "sourceField": "basicLocation.address.state",
+             "targetField": "AddressState"
+          },
+           {
+             "sourceField": "basicLocation.address.postalCode",
+             "targetField": "AddressPostalCode"
+          },
+          {
+             "sourceField": "basicLocation.address.countryCode",
+             "targetField": "AddressCountry"
+          },
+          {
+             "sourceField": "basicLocation.contact.communicationChannel.communicationValue",
+             "targetField": "Email"
+          },
+          {
+             "sourceField": "locationHierarchyInformation.ancestry.memberIdentifier",
+             "targetField": "Region"
+          },
+          {
+             "sourceField": "parentParty.primaryId",
+             "targetField": "Company"
+          },
+          {
+             "sourceField": "retailDetails.storeFormat",
+             "targetField": "Desc11"
+          },
+          {
+             "sourceField": "basicLocation.status.effectiveFromDate",
+             "targetField": "DBDateEffectiveFrom"
+          },
+          {
+             "sourceField": "basicLocation.status.effectiveUpToDate",
+             "targetField": "DBDateEffectiveTo"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# tools used in centralJenkinsfile; make sure to use the same versions as there:
+black==19.3b0
+flake8==3.7.7
+flake8-mutable==1.2.0
+isort==4.3.20
+mypy==0.740
+pytest==5.2.1
+pytest-cov==2.8.1

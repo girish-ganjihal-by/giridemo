@@ -1,0 +1,62 @@
+{
+    "header": {
+      "sender": "HOST.GLOBAL",
+      "receiver": [
+        "CATMANA.GLOBAL"
+      ],
+      "messageVersion": "BYDM 2020.2.0",
+      "messageId": "1c1bab69-bdaf-11e5-a09d-5c260a5caf2d-00003424",
+      "type": "item",
+      "creationDateAndTime": "2016-01-18T12:15:49.317+05:30"
+    },
+   "header": {
+      "sender": "HOST.GLOBAL",
+      "receiver": [
+        "CATMANA.GLOBAL"
+      ],
+      "messageVersion": "BYDM 2020.2.0",
+      "messageId": "1c1bab69-bdaf-11e5-a09d-5c260a5caf2d-00003424",
+      "type": "item",
+      "creationDateAndTime": "2016-01-18T12:15:49.317+05:30"
+    },
+    "item": [
+      {
+        "creationDateTime": "2021-03-01T01:45:49.161+05:30",
+        "documentStatusCode": "ORIGINAL",
+        "documentActionCode": "CHANGE_BY_REFRESH",
+        "senderDocumentId": "COND_A04-0000000932905845",
+        "itemId": {
+          "primaryId": "AG-3",
+          "additionalTradeItemId": [
+            {
+              "value": "11",
+              "typeCode": "GTIN_12"
+            }
+          ]
+        },
+          "unitRetailPrice": {
+            "currencyCode": "USD",
+            "value": "299.99"
+          }
+        },
+      {
+        "creationDateTime": "2021-03-01T01:45:49.161+05:30",
+        "documentStatusCode": "ORIGINAL",
+        "documentActionCode": "CHANGE_BY_REFRESH",
+        "senderDocumentId": "COND_A04-0000000932905845",
+        "itemId": {
+          "primaryId": "AG-3",
+          "additionalTradeItemId": [
+            {
+              "value": "11",
+              "typeCode": "GTIN_12"
+            }
+          ]
+        },
+          "unitRetailPrice": {
+            "currencyCode": "USD",
+            "value": "299.99"
+          }
+        }
+    ]
+}

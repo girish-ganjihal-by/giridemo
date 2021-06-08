@@ -1,0 +1,13 @@
+{
+    "PROTOCOL": "http",
+    "HOST": "localhost",
+    "PORT": "9811",
+    "APPLICATION_NAME": "pyadapter",
+    "LABEL": "master",
+    "ENVIRONMENT": "local",
+    "CATEGORIES": "publishers,workflows",
+    "BASE_API_PATH": "/cps/api/v1",
+    "USE_CACHING": true,
+    "USE_LOCAL_MODE": true,
+    "LOCAL_FILES_DIRECTORY": "../../config_repo/"
+}

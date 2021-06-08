@@ -1,0 +1,13 @@
+[tool.black]
+target_version = ['py36']
+
+[tool.isort]
+# keep isort config compatible to `black`;
+# see: https://black.readthedocs.io/en/stable/the_black_code_style.html
+# "A compatible .isort.cfg"
+# Set line_length to be consistent with black default (88)
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true

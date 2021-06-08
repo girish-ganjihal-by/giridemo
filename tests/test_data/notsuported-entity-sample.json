@@ -1,0 +1,680 @@
+{
+    "header": {
+      "sender": "HOST.GLOBAL",
+      "receiver": [
+        "CATMANA.GLOBAL"
+      ],
+      "messageVersion": "BYDM 2020.2.0",
+      "messageId": "1c1bab69-bdaf-11e5-a09d-5c260a5caf2d-00003424",
+      "type": "xyz",
+      "creationDateAndTime": "2016-01-18T12:15:49.317+05:30"
+    },
+    "xyz": [
+      {
+        "creationDateTime": "2016-01-18T12:15:49.317+05:30",
+        "documentStatusCode": "ORIGINAL",
+        "documentActionCode": "ADD",
+        "lastUpdateDateTime": "2016-01-18T12:15:49.317+05:30",
+        "itemId": {
+          "primaryId": "AG-3",
+          "additionalTradeItemId": [
+            {
+              "value": "11",
+              "typeCode": "GTIN_12"
+            }
+          ],
+          "itemName": "_itemName_"
+        },
+        "itemSubTypeCode": "BILL_OF_MATERIAL",
+        "tradeItemUnitDescriptorCode": "BASE_UNIT_OR_EACH",
+        "description": [
+          {
+            "languageCode": "en",
+            "descriptionType": "ITEM_NAME",
+            "value": "Agricultural tires AG-3"
+          },
+          {
+            "languageCode": "en",
+            "descriptionType": "LONG",
+            "value": "A long description of Agricultural tires AG-3"
+          },
+          {
+            "languageCode": "en",
+            "descriptionType": "SHORT",
+            "value": "Ag tires 3"
+          }
+        ],
+        "brandOwner": {
+          "primaryId": "ABACUS TIRES",
+          "additionalPartyId": [
+            {
+              "typeCode": "GLN",
+              "value": "0000000000000"
+            }
+          ]
+        },
+        "manufacturerOfTradeItem": {
+          "primaryId": "WXYZ TIRES",
+          "additionalPartyId": [
+            {
+              "typeCode": "GLN",
+              "value": "0000000000000"
+            }
+          ]
+        },
+        "supplierOfTradeItem": [
+          {
+            "primaryId": "RAYSOME TIRES",
+            "additionalPartyId": [
+              {
+                "typeCode": "GLN",
+                "value": "0000000000000"
+              }
+            ]
+          },
+          {
+            "primaryId": "CEAT India Inc",
+            "additionalPartyId": [
+              {
+                "typeCode": "GLN",
+                "value": "0000000000000"
+              }
+            ],
+              "name": "_name_",
+              "isPrimarySupplier": true,
+              "avpList": []
+          }
+        ],
+        "ownerOfTradeItem": {
+          "primaryId": "Part Client",
+          "additionalPartyId": [
+            {
+              "typeCode": "GLN",
+              "value": "0000000000000"
+            }
+          ]
+        },
+        "procurementAuthority": [
+          {
+            "authorityRole": "PLANNERCODE",
+            "authority": "RATZ"
+          },
+          {
+            "authorityRole": "BUYERCODE",
+            "authority": "BAM"
+          }
+        ],
+        "specificLocations": {
+          "allLocations": false,
+          "location": [
+            {
+              "primaryId": "WHB",
+              "additionalPartyId": [
+                {
+                  "typeCode": "GLN",
+                  "value": "0000000000000"
+                }
+              ]
+            },
+            {
+              "primaryId": "WHC",
+              "additionalPartyId": [
+                {
+                  "typeCode": "GLN",
+                  "value": "0000000000000"
+                }
+              ]
+            }
+          ]
+        },
+        "alternateItem": [
+          {
+            "additionalTradeItemId": {
+              "typeCode": "NDC",
+              "value": "TestFam69A"
+            },
+            "actionCode": "ADD",
+            "unitOfMeasure": "EA",
+            "isDisplayedItem": false
+          },
+          {
+            "additionalTradeItemId": {
+              "typeCode": "GTIN_12",
+              "value": "123456789012"
+            },
+            "actionCode": "ADD",
+            "unitOfMeasure": "CS",
+            "isDisplayedItem": true
+          }
+        ],
+        "countryOfOrigin": [
+          "CA"
+        ],
+        "childItem": {
+          "quantityOfChildren": 8,
+          "totalQuantityOfNextLowerLevelTradeItem": 8,
+          "childTradeItem": [
+            {
+              "primaryId": "Item1",
+              "additionalTradeItemId": [
+                {
+                  "typeCode": "GTIN-14",
+                  "value": "00000000001212"
+                }
+              ],
+              "quantityOfNextLowerLevelTradeItem": 8
+            }
+          ]
+        },
+        "tradeItemBaseUnitOfMeasure": "EA",
+        "itemHierarchyInformation": {
+          "ancestry": [
+            {
+              "hierarchyLevelId": "Family",
+              "memberId": "AG_FLD_MAC",
+              "memberName": "Agriculture Field Machines"
+            },
+            {
+              "hierarchyLevelId": "Subclass",
+              "memberId": "AG_EQUIP",
+              "memberName": "All Agriculture Equipments"
+            },
+            {
+              "hierarchyLevelId": "Class",
+              "memberId": "EQUIP",
+              "memberName": "All Equipments"
+            },
+            {
+              "hierarchyLevelId": "CM Category Level",
+              "memberId": "CM_EQUIP",
+              "memberName": "All CM Sub Equipments"
+            },
+            {
+              "hierarchyLevelId": "CM Subcategory Level",
+              "memberId": "CM_SUB_EQUIP",
+              "memberName": "All CM Sub Equipments"
+            }
+          ]
+        },
+        "itemLogisticUnitInformation": [
+          {
+            "logisticUnitConfigurationName": "1X2X3",
+            "actionCode": "ADD",
+            "description": [
+              {
+                "languageCode": "EN",
+                "descriptionType": "String",
+                "value": "1X2X3"
+              }
+            ],
+            "isDefaultLogisticUnitConfiguration": true,
+            "levelUnits": {
+              "measurementUnitCode": "FOT",
+              "value": 5
+            },
+            "itemLogisticUnit": [
+              {
+                "logisticUnitName": "EA",
+                "tradeItemQuantity": {
+                  "value": 1
+                },
+                "packageLevelNumber": 1,
+                "grossWeight": {
+                  "measurementUnitCode": "LBR",
+                  "value": 3
+                },
+                "netWeight": {
+                  "measurementUnitCode": "LBR",
+                  "value": 2.9
+                },
+                "dimensionsOfLogisticUnit": {
+                  "depth": {
+                    "measurementUnitCode": "FOT",
+                    "value": 2
+                  },
+                  "height": {
+                    "measurementUnitCode": "FOT",
+                    "value": 1.5
+                  },
+                  "width": {
+                    "measurementUnitCode": "FOT",
+                    "value": 2
+                  }
+                },
+                "grossVolume": {
+                  "measurementUnitCode": "FTQ",
+                  "value": 6
+                },
+                "isDefaultReceivingLevel": false,
+                "isActive": true,
+                "isCaseEquivalent": false,
+                "isPackEquivalent": false,
+                "isPalletEquivalent": false,
+                "transportationRatingUnit": "RATING_UNIT_CONTAINER_PALLETS",
+                "stackingRule": "STACKING_RULE_SAME_ITEM",
+                "maximumStackingFactor": 1,
+                "stackingWeightFactor": 1,
+                "stackingGroup": 0,
+                "containerType": "CNTRTYPE_CUBE"
+              },
+              {
+                "logisticUnitName": "CS",
+                "tradeItemQuantity": {
+                  "value": 2
+                },
+                "packageLevelNumber": 2,
+                "grossWeight": {
+                  "measurementUnitCode": "LBR",
+                  "value": 6
+                },
+                "netWeight": {
+                  "measurementUnitCode": "LBR",
+                  "value": 5.8
+                },
+                "dimensionsOfLogisticUnit": {
+                  "depth": {
+                    "measurementUnitCode": "FOT",
+                    "value": 2
+                  },
+                  "height": {
+                    "measurementUnitCode": "FOT",
+                    "value": 3
+                  },
+                  "width": {
+                    "measurementUnitCode": "FOT",
+                    "value": 2
+                  }
+                },
+                "grossVolume": {
+                  "measurementUnitCode": "FTQ",
+                  "value": 12
+                },
+                "isDefaultReceivingLevel": false,
+                "isActive": true,
+                "isCaseEquivalent": true,
+                "isPackEquivalent": true,
+                "isPalletEquivalent": false,
+                "transportationRatingUnit": "RATING_UNIT_CONTAINER_PALLETS",
+                "stackingRule": "STACKING_RULE_SAME_ITEM",
+                "maximumStackingFactor": 1,
+                "stackingWeightFactor": 2,
+                "stackingGroup": 0,
+                "containerType": "CNTRTYPE_CUBE"
+              },
+              {
+                "logisticUnitName": "PF",
+                "tradeItemQuantity": {
+                  "value": 6
+                },
+                "packageLevelNumber": 3,
+                "grossWeight": {
+                  "measurementUnitCode": "LBR",
+                  "value": 18
+                },
+                "netWeight": {
+                  "measurementUnitCode": "LBR",
+                  "value": 17.4
+                },
+                "dimensionsOfLogisticUnit": {
+                  "depth": {
+                    "measurementUnitCode": "FOT",
+                    "value": 6
+                  },
+                  "height": {
+                    "measurementUnitCode": "FOT",
+                    "value": 3
+                  },
+                  "width": {
+                    "measurementUnitCode": "FOT",
+                    "value": 2
+                  }
+                },
+                "grossVolume": {
+                  "measurementUnitCode": "FTQ",
+                  "value": 36
+                },
+                "assetId": {
+                  "primaryId": "TROLLY",
+                  "additionalIndividualAssetId": [
+                    {
+                      "typeCode": "GIAI",
+                      "value": "0000"
+                    }
+                  ]
+                },
+                "isDefaultReceivingLevel": true,
+                "isActive": true,
+                "isCaseEquivalent": false,
+                "isPackEquivalent": false,
+                "isPalletEquivalent": true,
+                "transportationRatingUnit": "RATING_UNIT_CONTAINER_PALLETS",
+                "stackingRule": "STACKING_RULE_SAME_ITEM",
+                "maximumStackingFactor": 1,
+                "stackingWeightFactor": 2,
+                "stackingGroup": 0,
+                "containerType": "CNTRTYPE_CUBE"
+              }
+            ]
+          }
+        ],
+        "itemLoadingFactor": [
+          {
+            "logisticUnitName": "PA",
+            "loadingType": "String",
+            "equipmentType": "String",
+            "originZone": "String",
+            "destinationZone": "String",
+            "status": "ITEM_LDNG_FCTR_STAT_ACTIVE",
+            "minimumDistance": {
+              "measurementUnitCode": "FOT",
+              "value": 0
+            },
+            "maximumDistance": {
+              "measurementUnitCode": "FOT",
+              "value": 0
+            },
+            "minimumTransitHours": 0,
+            "maximumTransitHours": 0,
+            "maximumQuantity": {
+              "value": 0
+            }
+          }
+        ],
+        "priority": 5,
+        "status": [
+          {
+            "statusCode": "ACTIVE",
+            "effectiveFromDateTime": "2001-12-17T09:30:47Z",
+            "effectiveUpToDateTime": "2021-12-17T09:30:47Z"
+          }
+        ],
+        "classifications": {
+          "itemType": "Agricultural",
+          "cycleCountClassification": "A",
+          "velocityClassification": "C",
+          "itemClass": "DEFAULT",
+          "itemFamilyGroup": "RADIAL",
+          "brandName": "Agro Tires",
+          "commodityTypeCode": [
+            {
+              "codeListName": "CommodityCode",
+              "value": "*DFT"
+            },
+            {
+              "codeListName": "NMFC",
+              "value": "70"
+            },
+            {
+              "codeListName": "FreightClassCode",
+              "value": "Class 70"
+            }
+          ],
+          "handlingInstruction": [
+            {
+              "handlingInstructionCode": "PAR"
+            },
+            {
+              "handlingInstructionCode": "DAE"
+            }
+          ]
+        },
+        "tradeItemMeasurements": {
+          "depth": {
+            "measurementUnitCode": "FOT",
+            "value": 1.265
+          },
+          "height": {
+            "measurementUnitCode": "FOT",
+            "value": 0.54
+          },
+          "inBoxCubeDimension": {
+            "measurementUnitCode": "FTQ",
+            "value": 1.00061
+          },
+          "netContent": [
+            {
+              "measurementUnitCode": "EA",
+              "value": 1
+            }
+          ],
+          "width": {
+            "measurementUnitCode": "FOT",
+            "value": 1.365
+          },
+          "pegMeasurements": [
+            {
+              "pegHoleNumber": 1,
+              "pegHorizontal": {
+                "measurementUnitCode": "FOT",
+                "value": 1.5
+              },
+              "pegVertical": {
+                "measurementUnitCode": "FOT",
+                "value": 0.6
+              },
+              "pegHoleWidth": {
+                "measurementUnitCode": "FOT",
+                "value": 0.1
+              },
+              "pegId": "abc123"
+            }
+          ],
+          "horizontalPegHoleCount": 1,
+          "tradeItemNesting": [
+            {
+              "nestingDirectionCode": "VERTICAL",
+              "nestingIncrement": [
+                {
+                  "measurementUnitCode": "FOT",
+                  "value": 0.8
+                }
+              ],
+              "nestingTypeCode": "NEGATIVE"
+            }
+          ],
+          "tradeItemOrientation": [
+            {
+              "orientationPreferenceSequence": 0,
+              "orientationTypeCode": "FRF_270"
+            }
+          ],
+          "tradeItemWeight": {
+            "grossWeight": {
+              "measurementUnitCode": "LBR",
+              "value": 1.0
+            }
+          },
+          "size": [
+            {
+              "sizeCode": {
+                "sizeCodeListCode": "2",
+                "value": "325/35R28"
+              }
+            }
+          ]
+        },
+        "financialInformation": {
+          "unitCost": {
+            "currencyCode": "USD",
+            "value": 253.99
+          },
+          "caseCost": {
+            "currencyCode": "USD",
+            "value": 475.99
+          },
+          "unitRetailPrice": {
+            "currencyCode": "USD",
+            "value": 299.99
+          },
+          "taxCode": 5
+        },
+        "itemDisplay": {
+          "minimumFingerSpaceAbove": 0,
+          "minimumFingerSpaceToRight": 0,
+          "jumbleFactor": 0,
+          "merchandisingStyle": [
+            {
+              "displayType": "TRAY",
+              "width": {
+                "measurementUnitCode": "FOT",
+                "value": 3
+              },
+              "height": {
+                "measurementUnitCode": "FOT",
+                "value": 2
+              },
+              "depth": {
+                "measurementUnitCode": "FOT",
+                "value": 3
+              },
+              "quantityOfUnitsWide": 1,
+              "quantityOfUnitsHigh": 2,
+              "quantityOfUnitsDeep": 1,
+              "totalQuantityOfUnits": 1,
+              "stackingLimit": 2
+            },
+            {
+              "displayType": "DISPLAY",
+              "width": {
+                "measurementUnitCode": "FOT",
+                "value": 6
+              },
+              "height": {
+                "measurementUnitCode": "FOT",
+                "value": 10
+              },
+              "depth": {
+                "measurementUnitCode": "FOT",
+                "value": 3
+              },
+              "quantityOfUnitsWide": 2,
+              "quantityOfUnitsHigh": 10,
+              "quantityOfUnitsDeep": 1,
+              "totalQuantityOfUnits": 20,
+              "stackingLimit": 5
+            }
+          ]
+        },
+        "operationalRules": {
+          "unitMovement": 5,
+          "daysOfSupplyRequired": 10,
+          "trackingInformation": {
+            "lpnIdLevel": "String",
+            "trackOriginCode": true,
+            "trackRevisionLevel": true,
+            "trackSupplierLotNumbers": true,
+            "trackLotNumbers": false,
+            "serializationType": "INBCAP_OUTVAL",
+            "serialLotControlType": "SLC_NOT_REQRD",
+            "serializationCode": "S"
+          },
+          "isReceivable": true,
+          "is3DLoadRequired": true,
+          "isInventoryAdjustmentAllowed": true,
+          "isDiscrete": true,
+          "receiveInventoryStatus": "H",
+          "countNearZero": true,
+          "countNearZeroQuantity": {
+            "measurementUnitCode": "EA",
+            "value": 5
+          },
+          "supportsCountBack": true,
+          "countThresholdQuantity": {
+            "measurementUnitCode": "EA",
+            "value": 15
+          },
+          "countThresholdCost": {
+            "currencyCode": "USD",
+            "value": 3000
+          }
+        },
+        "serialNumber": [
+          {
+            "serialNumberType": "1234567",
+            "format": "String",
+            "reportToHost": true,
+            "sortSequence": 0,
+            "description": {
+              "languageCode": "en",
+              "descriptionType": "LONG",
+              "value": "This is a serial number"
+            }
+          }
+        ],
+        "apparelInformation": {
+          "style": "Polo",
+          "descriptiveSizeDimension": {
+            "languageCode": "en",
+            "value": "XL"
+          },
+          "clothingCut": [
+            {
+              "languageCode": "en",
+              "value": "Loose Fit"
+            }
+          ],
+          "colour": {
+            "colourCode": {
+              "colourCodeListCode": "1",
+              "value": "Blue"
+            }
+          }
+        },
+        "demandUnitInformation": [
+          {
+            "demandUnitName": "AG-3",
+            "actionCode": "ADD",
+            "demandUnitDetails": {
+              "demandUnitBaseUnitOfMeasure": "EA",
+              "brandName": "Agro Tires",
+              "description": {
+                "value": "Demand Unit Description"
+              },
+              "collectionId": "AG_TYR_SLS",
+              "unitSize": 1,
+              "unitsPerPack": 4,
+              "onOrderQuantity": {
+                "value": 50
+              },
+              "ignorePricingLevel": true,
+              "priceLinkId": "PL-2020",
+              "handlingInstruction": {
+                "handlingInstructionCode": "PER"
+              },
+              "weatherCategory": "warm"
+            }
+          }
+        ],
+        "manufacturingModelInformation": [
+          {
+            "modelId": "AG_TYR_MDL_1",
+            "baseUnitOfMeasure": "EA"
+          },
+          {
+            "modelId": "AG_TYR_MDL_2",
+            "baseUnitOfMeasure": "4XUnit"
+          }
+        ],
+        "measurementTypeConversion": [
+          {
+            "sourceMeasurementUnitCode": {
+              "measurementUnitCode": "FTQ"
+            },
+            "targetMeasurementUnitCode": {
+              "measurementUnitCode": "LBR"
+            },
+            "ratioOfTargetPerSource": 8
+          },
+          {
+            "sourceMeasurementUnitCode": {
+              "measurementUnitCode": "PF"
+            },
+            "targetMeasurementUnitCode": {
+              "measurementUnitCode": "EA"
+            },
+            "ratioOfTargetPerSource": 60
+          }
+        ]
+      }
+    ]
+  }

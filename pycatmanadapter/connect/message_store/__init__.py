@@ -1,0 +1,3 @@
+from pycatmanadapter.connect.message_store.message_store_provider import MessageStoreProvider
+
+adapter_message_store = MessageStoreProvider()

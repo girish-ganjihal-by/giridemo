@@ -1,0 +1,49 @@
+store:
+  enabled: true
+  protocol: "http"
+  host: localhost
+  port: 9831
+  basePath: "/messagestore/api/v3"
+  serviceName: CATMAN-GLOBAL
+  serviceType: ADAPTER
+  serviceInstance: CATMAN-CLUSTER
+  serviceHost: localhost
+  serviceVersion: 2020.1.0
+  sender: SAP.GLOBAL
+  endpointType: Receiving
+  endpointName: CATMAN.GLOBAL
+  # messageCategory: Request
+  # storeStatus: Prepared
+  clientId: xx
+  clientSecret: xx
+  https:
+    tls:
+      keyStore:
+        path: "keystore.jks"
+        password-secure: "changeme"
+        key:
+          password-secure: "changeme"
+      trustStore:
+        path: "truststore.jks"
+        password-secure: "changeme"
+  #message store calls Until-successful retry properties
+  retry:
+    limit: "5" ## Max retry count
+    delay: "10000" ## In Milliseconds
+
+jms:
+  username: "admin"
+  password: "admin"
+  host: "localhost"
+  port: "61613"
+  queue: "PYCAT_INBOUND"
+
+api:
+  # Retry delay in seconds
+  retryDelay: 1
+  # Retry count : Number of retries to be attempted
+  retryCount: 3
+  # api timeout : Time in seconds to wait for response from an api call
+  timeout : 2
+
+

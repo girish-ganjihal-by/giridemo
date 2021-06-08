@@ -1,0 +1,2 @@
+class AdapterBusinessError(Exception):
+    pass

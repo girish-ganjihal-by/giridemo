@@ -1,0 +1,470 @@
+---
+Mappings:
+- modelMapping:
+    sourceModel: item
+    targetModel: product
+    fieldMapping:
+    - sourceField: itemId.additionalTradeItemId.value
+      targetField: UPC
+    - sourceField: itemId.primaryId
+      targetField: ID
+    - sourceField: description.value
+      targetField: Name
+      Condition:
+        options:
+        - eq:
+            field: description.descriptionType
+            value: ITEM_NAME
+    - sourceField: tradeItemMeasurements.width.value
+      targetField: Width
+    - sourceField: tradeItemMeasurements.height.value
+      targetField: Height
+    - sourceField: tradeItemMeasurements.depth.value
+      targetField: Depth
+    - sourceField: description.value
+      targetField: AbbrevName
+      Condition:
+        options:
+        - eq:
+            field: description.descriptionType
+            value: SHORT
+    - sourceField: tradeItemMeasurements.netContent.value
+      targetField: Size
+    - sourceField: tradeItemMeasurements.netContent.measurementUnitCode
+      targetField: UOM
+    - sourceField: manufacturerOfTradeItem.primaryId
+      targetField: Manufacturer
+    - sourceField: itemHierarchyInformation.ancestry.memberId
+      targetField: Category
+      Condition:
+        options:
+        - eq:
+            field: itemHierarchyInformation.ancestry.hierarchyLevelId
+            value: CM Category Level
+    - sourceField: supplierOfTradeItem.primaryId
+      targetField: Supplier
+    - sourceField: tradeItemMeasurements.tradeItemNesting.nestingIncrement.value
+      targetField: XNesting
+      Condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.tradeItemNesting.nestingDirectionCode
+            value: HORIZONTAL
+    - sourceField: tradeItemMeasurements.tradeItemNesting.nestingIncrement.value
+      targetField: YNesting
+      Condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.tradeItemNesting.nestingDirectionCode
+            value: VERTICAL
+    - sourceField: tradeItemMeasurements.tradeItemNesting.nestingIncrement.value
+      targetField: ZNesting
+      Condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.tradeItemNesting.nestingDirectionCode
+            value: Z_AXIS
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+      targetField: Pegholes
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegHorizontal.value
+      targetField: PegholeX
+      Condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '1'
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegVertical.value
+      targetField: PegholeY
+      Condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '1'
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegHoleWidth.value
+      targetField: PegholeWidth
+      Condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '1'
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegHorizontal.value
+      targetField: Peghole2X
+      Condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '2'
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegVertical.value
+      targetField: Peghole2Y
+      Condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '2'
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegHoleWidth.value
+      targetField: Peghole2Width
+      Condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '3'
+    - sourceField: classifications.packageStyle
+      targetField: PackageStyle
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegIdentifier
+      targetField: PegID
+    - sourceField: itemDisplay.minimumFingerSpaceAbove
+      targetField: FingerSpaceY
+    - sourceField: itemDisplay.jumbleFactor
+      targetField: JumbleFactor
+    - sourceField: financialInformation.unitRetailPrice.value
+      targetField: Price
+    - sourceField: financialInformation.taxCode
+      targetField: TaxCode
+    - sourceField: operationalRules.unitMovement
+      targetField: UnitMovement
+    - sourceField: operationalRules.daysOfSupplyRequired
+      targetField: DaysSupply
+    - sourceField: tradeItemMeasurements.horizontalPegHoleCount
+      targetField: PegSpan
+    - sourceField: itemDisplay.merchandisingStyle.width.value
+      targetField: TrayWidth
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.height.value
+      targetField: TrayHeight
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.depth.value
+      targetField: TrayDepth
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsWide
+      targetField: TrayNumberWide
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsHigh
+      targetField: TrayNumberHigh
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsDeep
+      targetField: TrayNumberDeep
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.totalQuantityOfUnits
+      targetField: TrayTotalNumber
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.stackingLimit
+      targetField: TrayMaxHigh
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.width.value
+      targetField: CaseWidth
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.height.value
+      targetField: CaseHeight
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.depth.value
+      targetField: CaseDepth
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsWide
+      targetField: CaseNumberWide
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsHigh
+      targetField: CaseNumberHigh
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsDeep
+      targetField: CaseNumberDeep
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.totalQuantityOfUnits
+      targetField: CaseTotalNumber
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.stackingLimit
+      targetField: CaseMaxHigh
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.width.value
+      targetField: DisplayWidth
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.height.value
+      targetField: DisplayHeight
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.depth.value
+      targetField: DisaplyDepth
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsWide
+      targetField: DisaplyNumberWide
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsHigh
+      targetField: DisplayNumberHigh
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsDeep
+      targetField: DisplayNumberDeep
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.totalQuantityOfUnits
+      targetField: DisplayTotalNumber
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.stackingLimit
+      targetField: CaseMaxHigh
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.width.value
+      targetField: AlternateWidth
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.height.value
+      targetField: AlternateHeight
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.depth.value
+      targetField: AlteernateDepth
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsWide
+      targetField: AlternateNumberWide
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsHigh
+      targetField: AlternateNumberHigh
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsDeep
+      targetField: AlternateNumberDeep
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.totalQuantityOfUnits
+      targetField: AlternateTotalNumber
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.stackingLimit
+      targetField: AlternateMaxHigh
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.width.value
+      targetField: LooseWidth
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.height.value
+      targetField: LooseHeight
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.depth.value
+      targetField: LooseDepth
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsWide
+      targetField: LooseNumberWide
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsHigh
+      targetField: LooseNumberHigh
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsDeep
+      targetField: LooseNumberDeep
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.totalQuantityOfUnits
+      targetField: LooseTotalNumber
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.stackingLimit
+      targetField: LooseMaxHigh
+      Condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: financialInformation.unitCost.value
+      targetField: value50
+    - sourceField: classifications.itemForm
+      targetField: Desc2
+    - sourceField: classifications.flavorOrScent
+      targetField: Desc3
+    - sourceField: description.value
+      targetField: Desc5
+    - sourceField: classifications.usageStyle
+      targetField: Desc4
+    - sourceField: operationalRules.shelfLife
+      targetField: Desc6
+    - sourceField: description.value
+      targetField: Desc7
+      Condition:
+        options:
+        - eq:
+            field: description.descriptionType
+            value: Pack
+    - sourceField: classifications.consumptionType
+      targetField: Desc8
+    - sourceField: classifications.packageStyle
+      targetField: Desc9
+    - sourceField: classifications.ethnicity
+      targetField: Desc11
+    - sourceField: classifications.handlingInstruction.transportTemperature.maximumTemperature
+      targetField: Desc13
+      Condition:
+        options:
+        - eq:
+            field: classifications.handlingInstruction.handlingInstructionCode
+            value: TMC
+    - sourceField: classifications.dietType
+      targetField: Desc33
+    - sourceField: salesRestriction
+      targetField: Desc39
+    - sourceField: classifications.isBaseAssortmentItem
+      targetField: Flag1
+    - sourceField: classifications.isSeasonal
+      targetField: Flag3
+    - sourceField: classifications.isControlledSubstance
+      targetField: Flag4
+    - sourceField: classifications.isPromotional
+      targetField: Flag5
+    - sourceField: classifications.isOrganic
+      targetField: Flag7
+    - sourceField: classifications.isPrivateLabel
+      targetField: Flag9
+    - sourceField: classifications.isEverydayLowPriceItem
+      targetField: Flag10
+    - sourceField: classifications.brandName
+      targetField: Brand
+    - sourceField: itemHierarchyInformation.ancestry.memberId
+      targetField: Subcategory
+    - sourceField: tradeItemMeasurements.tradeItemWeight.grossWeight.value
+      targetField: Weight
+    - sourceField: itemDisplay.minimumFingerSpaceToRight
+      targetField: FingerSpaceX
+    - sourceField: status.effectiveFromDateTime
+      targetField: DBDateEffectiveFrom
+    - sourceField: status.effectiveUpToDateTime
+      targetField: DBDateEffectiveTo
