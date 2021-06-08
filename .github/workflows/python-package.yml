@@ -31,7 +31,7 @@ jobs:
         python -m pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
-      if: matrix.os == 'ubuntu-latest'
+      if: matrix.os == 'windows-latest'
       run: |
         
-
+ 
