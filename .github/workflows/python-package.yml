@@ -20,6 +20,7 @@ jobs:
         dir
         cd plat-con-catman-adapter
         dir
-        cmd "ping www.google.com"
+        curl -v www.google.com
+        cmd "ping  www.google.com"
         cmd  "ping http://md1npdvjdapc01:9811/cps/api/v1/application/pyadapter/properties?environment=local"
         cmd "ping http://admin:admin@localhost:8161/admin/queues.jsp"
