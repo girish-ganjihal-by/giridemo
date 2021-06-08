@@ -19,10 +19,11 @@ jobs:
         echo hellos
         echo path of pycatmanadapter whereyou installed
         cd plat-con-catman-adapter
-        python -m pip install -e.
+        echo python -m pip install -e.
+        dir
         cd plat-con-catman-adapter/pycatmanadapter
-        python -m pip install pyinstaller
-        pyinstaller -p pycatmanadapter launch.py
+        ech python -m pip install pyinstaller
+        echo pyinstaller -p pycatmanadapter launch.py
         echo curl -v www.google.com
         echo curl -v http://admin:admin@localhost:8161/admin/queues.jsp
         echo cmd "ping  www.google.com"
