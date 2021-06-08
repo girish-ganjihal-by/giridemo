@@ -18,10 +18,6 @@ jobs:
         cd pycatmanadapter
         python -m pip install pyinstaller
         pyinstaller -p pycatmanadapter launch.py
-        echo python -m pip install pyinstaller
-        echo pyinstaller -p pycatmanadapter launch.py
-        echo curl -v www.google.com
-        echo curl -v http://admin:admin@localhost:8161/admin/queues.jsp
-        echo cmd "ping  www.google.com"
-        echo cmd  "ping http://md1npdvjdapc01:9811/cps/api/v1/application/pyadapter/properties?environment=local"
-        echo md "ping http://admin:admin@localhost:8161/admin/queues.jsp"
+        xcopy  "%1\plat-con-catman-adapter\pycatmanadapter\config_repo"  "%1\plat-con-catman-adapter\pycatmanadapter\dist\launch\config_repo" /e /i /h
+mkdir %1\plat-con-catman-adapter\pycatmanadapter\dist\launch\connect
+
