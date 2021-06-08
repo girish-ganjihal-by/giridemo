@@ -17,5 +17,5 @@ jobs:
       run: | 
         echo hi %1
         echo hello
-        cd GITHUB_WORKSPACE
+        cd D:\a\giridemo\giridemo
 
