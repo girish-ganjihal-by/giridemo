@@ -18,4 +18,5 @@ jobs:
         echo hi %1
         echo hello
         cd D:\a\giridemo\giridemo
+        dir
 
