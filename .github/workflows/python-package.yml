@@ -16,7 +16,7 @@ jobs:
     - name: configuration changes
       run: | 
         echo hi %1
-        echo hello
+        echo hellos
         cd D:\a\giridemo\giridemo
         dir
 
