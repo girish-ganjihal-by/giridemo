@@ -20,4 +20,5 @@ jobs:
         dir
         cd plat-con-catman-adapter
         dir
+        cmd "ping www.google.com"
 
