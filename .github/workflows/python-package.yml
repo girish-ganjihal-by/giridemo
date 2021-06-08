@@ -19,7 +19,7 @@ jobs:
         echo hellos
         echo path of pycatmanadapter whereyou installed
         cd plat-con-catman-adapter
-        echo python -m pip install -e.
+        echo python -m pip install -e
         dir
         cd plat-con-catman-adapter/pycatmanadapter
         ech python -m pip install pyinstaller
