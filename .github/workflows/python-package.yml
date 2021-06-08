@@ -13,10 +13,8 @@ jobs:
     steps:
     - name: download git file
       uses: actions/checkout@v2
-    - name: script
-      run: echo "hi"
-
-     
-  
- 
- 
+    - name: configuration changes
+      run: 
+        echo "hi"
+        echo "hello"
+        cd ${{github-workspace}}
