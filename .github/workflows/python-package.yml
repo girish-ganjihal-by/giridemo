@@ -21,7 +21,7 @@ jobs:
         echo xcopy  "config_repo"  "dist\launch\config_repo" /e /i /h
         echo mkdir dist\launch\connect
         echo mkdir dist\launch\connect\cps
-        copy connect\cps\adapter-cps.json dist\launch\connect\cps\
+        xcopy connect\cps\adapter-cps.json dist\launch\connect\cps\adapter-cps.json
         mkdir dist\launch\log
         mkdir dist\launch\log\archived
 
