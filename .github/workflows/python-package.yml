@@ -21,4 +21,4 @@ jobs:
         cd plat-con-catman-adapter
         dir
         cmd "ping www.google.com"
-        curl  --head  http://admin:admin@localhost:8161
+        curl --insecure http://md1npdvjdapc01:9811/cps/api/v1/application/pyadapter/properties?environment=local
