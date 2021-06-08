@@ -13,9 +13,7 @@ jobs:
     steps:
     - name: download git file
       uses: actions/checkout@v2
-      with:
-        script: |
-          git pull origin master
+      
 
      
   
