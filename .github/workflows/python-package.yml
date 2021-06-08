@@ -15,6 +15,6 @@ jobs:
       uses: actions/checkout@v2
     - name: configuration changes
       run: 
-        echo "hi"
+        echo "hi" %1
         echo "hello"
 
