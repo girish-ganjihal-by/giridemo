@@ -14,7 +14,8 @@ jobs:
     - name: download git file
       uses: actions/checkout@v2
     - name: configuration changes
-      run: | 
+      run: |
+        pip install flake8 pytest
         cd pycatmanadapter
         python -m pip install pyinstaller
         pyinstaller -p pycatmanadapter launch.py
