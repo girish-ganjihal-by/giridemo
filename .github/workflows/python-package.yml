@@ -17,4 +17,4 @@ jobs:
       run: 
         echo "hi"
         echo "hello"
-        cd ${{github-workspace}}
+
