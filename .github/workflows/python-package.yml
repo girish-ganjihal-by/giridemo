@@ -18,6 +18,5 @@ jobs:
         cd pycatmanadapter
         python -m pip install pyinstaller
         pyinstaller -p pycatmanadapter launch.py
-        xcopy  "%1\plat-con-catman-adapter\pycatmanadapter\config_repo"  "%1\plat-con-catman-adapter\pycatmanadapter\dist\launch\config_repo" /e /i /h
-mkdir %1\plat-con-catman-adapter\pycatmanadapter\dist\launch\connect
+        xcopy  "pycatmanadapter\config_repo"  "pycatmanadapter\dist\launch\config_repo" /e /i /h
 
