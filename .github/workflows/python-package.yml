@@ -16,7 +16,7 @@ jobs:
     - name: configuration changes
       run: | 
         cd pycatmanadapter
-        python -m pip install pyinstaller
-        pyinstaller -p pycatmanadapter launch.py
-        xcopy  "pycatmanadapter\config_repo"  "pycatmanadapter\dist\launch\config_repo" /e /i /h
+        echo python -m pip install pyinstaller
+        echo pyinstaller -p pycatmanadapter launch.py
+        xcopy  "config_repo"  "dist\launch\config_repo" /e /i /h
 
