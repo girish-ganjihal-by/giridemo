@@ -13,9 +13,8 @@ jobs:
     steps:
     - name: download git file
       uses: actions/checkout@v2
-      with:
-        script: |
-          echo "file is fetched"
+    - name: script
+      run: echo "hi"
 
      
   
