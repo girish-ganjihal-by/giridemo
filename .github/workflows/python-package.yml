@@ -18,7 +18,7 @@ jobs:
         echo hi %1
         echo hellos
         dir
-        cd plat-con-catman-adapter/pycatmanadapter
+        cd plat-con-catman-adapter
         dir
         cmd "ping www.google.com"
         curl  --head  http://admin:admin@localhost:8161
