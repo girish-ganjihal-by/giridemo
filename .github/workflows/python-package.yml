@@ -17,11 +17,14 @@ jobs:
       run: | 
         echo hi %1
         echo hellos
-        dir
+        echo path of pycatmanadapter whereyou installed
         cd plat-con-catman-adapter
-        dir
-        curl -v www.google.com
-        curl -v http://admin:admin@localhost:8161/admin/queues.jsp
-        cmd "ping  www.google.com"
-        cmd  "ping http://md1npdvjdapc01:9811/cps/api/v1/application/pyadapter/properties?environment=local"
-        cmd "ping http://admin:admin@localhost:8161/admin/queues.jsp"
+        python -m pip install -e.
+        cd plat-con-catman-adapter/pycatmanadapter
+        python -m pip install pyinstaller
+        pyinstaller -p pycatmanadapter launch.py
+        echo curl -v www.google.com
+        echo curl -v http://admin:admin@localhost:8161/admin/queues.jsp
+        echo cmd "ping  www.google.com"
+        echo cmd  "ping http://md1npdvjdapc01:9811/cps/api/v1/application/pyadapter/properties?environment=local"
+        echo md "ping http://admin:admin@localhost:8161/admin/queues.jsp"
