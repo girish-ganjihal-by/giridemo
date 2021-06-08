@@ -19,8 +19,9 @@ jobs:
         echo hellos
         echo path of pycatmanadapter whereyou installed
         dir
-        cd pycatmanadapter/config_repo
-        ech python -m pip install pyinstaller
+        cd pycatmanadapter
+        python -m pip install pyinstaller
+        echo python -m pip install pyinstaller
         echo pyinstaller -p pycatmanadapter launch.py
         echo curl -v www.google.com
         echo curl -v http://admin:admin@localhost:8161/admin/queues.jsp
