@@ -18,9 +18,8 @@ jobs:
         echo hi %1
         echo hellos
         echo path of pycatmanadapter whereyou installed
-        cd plat-con-catman-adapter
         dir
-        cd pycatmanadapter
+        cd pycatmanadapter/config_repo
         ech python -m pip install pyinstaller
         echo pyinstaller -p pycatmanadapter launch.py
         echo curl -v www.google.com
