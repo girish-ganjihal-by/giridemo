@@ -25,7 +25,6 @@ jobs:
         mkdir dist\launch\log
         mkdir dist\launch\log\archived
         tar -zcvf dist\connect-catman-adapter-exec-windows.tar.gz dist\launch
-        cd C:\Users\Guest1
     - name: Archive Build
       uses: actions/upload-artifact@v1
       with:
