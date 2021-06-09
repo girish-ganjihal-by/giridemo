@@ -25,8 +25,8 @@ jobs:
         mkdir dist\launch\log
         mkdir dist\launch\log\archived
         tar -zcvf dist\connect-catman-adapter-exec-windows.tar.gz dist\launch
-    - name: Archive Build
+    - name: upload to workspace
       uses: actions/upload-artifact@v1
       with:
         name: build
-        path: ./build
+        path: ./dist
