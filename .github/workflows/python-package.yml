@@ -27,6 +27,4 @@ jobs:
         tar -zcvf dist\connect-catman-adapter-exec-windows.tar.gz dist\launch
     - name: upload to workspace
       uses: actions/upload-artifact@v1
-      with:
-        name: build
-        path: ./dist
+      
