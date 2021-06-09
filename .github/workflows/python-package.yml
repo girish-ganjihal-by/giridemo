@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  job1:
+  build:
     name: build executable
     runs-on: windows-latest
     steps:
@@ -25,10 +25,9 @@ jobs:
         mkdir dist\launch\log
         mkdir dist\launch\log\archived
         tar -zcvf dist\connect-catman-adapter-exec-windows.tar.gz dist\launch
-    - uses: actions/upload-artifact@v2
+        cd C:\Users\Guest1
+    - name: Archive Build
+      uses: actions/upload-artifact@v1
       with:
-        name: my-artifact
-        path: dist\ 
-
-    
-
+        name: build
+        path: ./build
