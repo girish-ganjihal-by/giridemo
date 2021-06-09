@@ -25,7 +25,10 @@ jobs:
         mkdir dist\launch\log
         mkdir dist\launch\log\archived
         tar -zcvf dist\connect-catman-adapter-exec-windows.tar.gz dist\launch
-        cd C:\Users\Guest1
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: path/to/artifact/ 
 
     
 
