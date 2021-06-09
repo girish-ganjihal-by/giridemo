@@ -24,6 +24,6 @@ jobs:
         echo copy connect\cps\adapter-cps.json dist\launch\connect\cps\
         mkdir dist\launch\log
         mkdir dist\launch\log\archived
-        tar -zcvf dist\connect-catman-adapter-exec-windows.tar.gz \dist\launch
+        tar -zcvf dist\connect-catman-adapter-exec-windows.tar.gz dist\launch
     
 
