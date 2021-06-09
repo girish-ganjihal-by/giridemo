@@ -29,6 +29,5 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: build
-        path: ${{ github.workspace }}
-    
+        path: ./dist
 
