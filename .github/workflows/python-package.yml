@@ -25,5 +25,7 @@ jobs:
         mkdir dist\launch\log
         mkdir dist\launch\log\archived
         tar -zcvf dist\connect-catman-adapter-exec-windows.tar.gz dist\launch
+        cd dist
+        dir
     
 
