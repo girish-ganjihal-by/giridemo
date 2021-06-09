@@ -14,21 +14,16 @@ jobs:
     - name: download git file
       uses: actions/checkout@v2
     - name: configuration changes
-      run: |
-        pip install flake8 pytest
-        pip install requests
+      run: | 
         cd pycatmanadapter
-        python -m pip install pyinstaller
-        pyinstaller -p pycatmanadapter launch.py
+        echo python -m pip install pyinstaller
+        echo pyinstaller -p pycatmanadapter launch.py
         xcopy  "config_repo"  "dist\launch\config_repo" /e /i /h
         mkdir dist\launch\connect
         mkdir dist\launch\connect\cps
         echo copy connect\cps\adapter-cps.json dist\launch\connect\cps\
         mkdir dist\launch\log
         mkdir dist\launch\log\archived
-    - name: Test with pytest
-      run: |
-        pytest
-   
-
+        tar -zcvf dist\connect-catman-adapter-exec-windows.tar.gz \dist\launch
+    
 
