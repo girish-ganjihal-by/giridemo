@@ -20,5 +20,6 @@ jobs:
         import yamale
         schema = yamale.make_schema('pycatmanadapter\schema\schemaConfig.yaml')
         #schema1 = yamale.make_schema('pycatmanadapter\schema\schemaConfig1.yaml')
+        cd config_repo\pyadapter
         data = yamale.make_data('pycatmanadapter\config_repo\pyadapter\local\master\resources\locationConfig.yaml')
         yamale.validate(schema,data)
