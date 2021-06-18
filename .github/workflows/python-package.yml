@@ -1,3 +1,4 @@
+  
 name: Python package
 
 on:
@@ -13,6 +14,9 @@ jobs:
     steps:
     - name: download git file
       uses: actions/checkout@v2
+    - name: config-repo validatiion
+      run: |
+        printf('hi')
     - name: configuration changes
       run: | 
         cd pycatmanadapter
@@ -30,4 +34,3 @@ jobs:
       with:
         name: build
         path: ${{ github.workspace }}
-
