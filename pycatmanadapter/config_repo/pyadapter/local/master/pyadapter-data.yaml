@@ -1,0 +1,13 @@
+user:
+  password: testpwd23423,
+  userName: testuserName12346@elkjop.no,
+  email: testemail12346@elkjop.no,
+  isWindowsUser: 0,
+  isLocked: 0
+
+role:
+  grp_store_role : ELK_role_stores-tst22
+  grp_store_name : Group Users
+  store_user_role : ELK_role_stores-tst23
+  store_user_name : Store Users
+  guest_user_role : ix_grp_guest

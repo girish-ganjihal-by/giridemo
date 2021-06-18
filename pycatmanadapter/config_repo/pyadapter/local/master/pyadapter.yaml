@@ -1,6 +1,7 @@
 store:
-  enabled: true
+  enabled: false
   protocol: "http"
+  disable_ssl_cert_verification: "true"
   host: localhost
   port: 9831
   basePath: "/messagestore/api/v3"
@@ -8,7 +9,7 @@ store:
   serviceType: ADAPTER
   serviceInstance: CATMAN-CLUSTER
   serviceHost: localhost
-  serviceVersion: 2020.1.0
+  serviceVersion: 2021.1.0
   sender: SAP.GLOBAL
   endpointType: Receiving
   endpointName: CATMAN.GLOBAL
@@ -20,24 +21,28 @@ store:
     tls:
       keyStore:
         path: "keystore.jks"
-        password-secure: "changeme"
-        key:
-          password-secure: "changeme"
       trustStore:
         path: "truststore.jks"
-        password-secure: "changeme"
   #message store calls Until-successful retry properties
   retry:
     limit: "5" ## Max retry count
     delay: "10000" ## In Milliseconds
 
-jms:
-  username: "admin"
-  password: "admin"
-  host: "localhost"
-  port: "61613"
-  queue: "PYCAT_INBOUND"
+archiver:
+  path: "log/archived"
 
+bydm:
+  validation:
+    enabled: false
+canModel:
+  useLocalMode: false
+  useCaching: false
+  localCanModelPath: "local-canmodel"
+  remote:
+    protocol: "http"
+    host: "localhost"
+    port: "9861"
+    pathFormat: "/canmodel/api/v1/canModels/%s/%s"
 api:
   # Retry delay in seconds
   retryDelay: 1
@@ -46,4 +51,12 @@ api:
   # api timeout : Time in seconds to wait for response from an api call
   timeout : 2
 
+ack:
+  notification:
+    error:
+      enabled: "false"
 
+bulkNotification:
+  azure:
+    connection.string: "BlobEndpoint=https://cntfwkblobtest.blob.core.windows.net;SharedAccessSignature=sp=racwdl&st=2021-05-26T12:09:00Z&se=2021-10-01T20:09:00Z&spr=https&sv=2020-02-10&sr=c&sig=4Cfa7c5pZQxnmaobjipBZqzQn%2B59bcKipMbBvEEY664%3D"
+    container.name: "adapter-test"

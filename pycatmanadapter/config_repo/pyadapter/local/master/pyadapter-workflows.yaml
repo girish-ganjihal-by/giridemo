@@ -1,36 +1,94 @@
 workflows:
-  location:
-    publisher: "catman_api"
-    publisherOptions:
-      # path: "/Stores/api/v2/odata/Stores"
-      path: "/ckb-stores/v2/stores"
-      db_parent_prc_key: "3"
-      filter: "?$filter=storeNumber eq %s & $select =dbKey"
-      filterField: "storenumber"
-  item:
-    publisher: "catman_api"
-    publisherOptions:
-      # path: "/Products/api/v2/odata/Products"
-      path: "/ckb-products/v2/products"
-      db_parent_prc_key: "1"
-      filter: "?$filter=ID eq '%s'&$select =dbKey"
-      filterField: "id"
-  floorplan:
-    publisher: "catman_api"
-    publisherOptions:
-      # path: "/Floorplans/api/v2/odata/Floorplans"
-      path: "/ckb-floorplans/v2/floorplans"
-      db_parent_prc_key: "???"
-  userRole:
-    publisher: "catman_api"
-    publisherOptions:
-      # path: "/Floorplans/api/v2/odata/Floorplans"
-      path: "/ckb-users/v2/roles"
-      db_parent_prc_key: "???"    
-      filter: "?$filter=role eq '%s'"
-      filterField: "role"
-  user:
-    publisher: "catman_api"
-    publisherOptions:
-      path: "/ckb-users/v2/users"
-      db_parent_prc_key: "???"
+  inbound:
+    location:
+      trigger: "inbound_jms"
+      publisher: "catman_api"
+      publisherOptions:
+        # path: "/Stores/api/v2/odata/Stores"
+        path: "/ckb-stores/v2/stores"
+        db_parent_prc_key: "3"
+        filter: "?$filter=storeNumber eq %s & $select =dbKey"
+        filterField: "storenumber"
+    item:
+      trigger: "inbound_jms"
+      publisher: "catman_api"
+      publisherOptions:
+        # path: "/Products/api/v2/odata/Products"
+        path: "/ckb-products/v2/products"
+        db_parent_prc_key: "1"
+        filter: "?$filter=ID eq '%s'&$select =dbKey"
+        filterField: "id"
+    itemHierarchyLevelMember:
+        publisher: "catman_api"
+    floorplan:
+      publisher: "catman_api"
+      publisherOptions:
+        # path: "/Floorplans/api/v2/odata/Floorplans"
+        path: "/ckb-floorplans/v2/floorplans"
+        filterStoreNoBasedFetch: "?$filter=value1 eq %s"
+        pathPerFloorplan : "/ckb-floorplans/v2/floorplans/%s"
+        db_parent_prc_key: "???"
+    user:
+      publisher: "catman_api"
+      publisherOptions:
+        path: "/ckb-users/v2/users"
+        db_parent_prc_key: "???"
+        filter: "?$filter=userId eq %d"
+        filterField: "userId"
+    userRole:
+      publisher: "catman_api"
+      publisherOptions:
+        path: "/ckb-users/v2/roles"
+        db_parent_prc_key: "???"
+        filter: "?$filter=role eq '%s'"
+        filterField: "roleID"
+    roleGroup:
+      publisher: "catman_api"
+      publisherOptions:
+        path: "/ckb-users/v2/roleGroups"
+        db_parent_prc_key: "???"
+        pathPerRoleGroup : "/ckb-users/v2/roleGroups/%s/roles"
+        pathForRoleAssignment : "/ckb-users/v2/roleGroups/%s/roles/assign"
+  outbound:
+    floorplan:
+      trigger: "floorplan_scheduler"
+      publisher: "outbound_jms"
+      triggerOptions:
+        path: "/ckb-floorplans/v2/floorplans"
+        filter: "?$top=100"
+      publisherOptions:
+        queue_name: "PYCAT_OUTBOUND"
+        message_type: "BYDM"
+        message_version: "BYDM 2020.2.0"
+        message_receiver: "SAP.GLOBAL"
+    planogram:
+      trigger: "planogram_scheduler"
+      publisher: "outbound_jms"
+      triggerOptions:
+        path: "/ckb-planograms/v2/planograms"
+        filter: "?$select=dbkey,dbstatus,dBDateEffectiveFrom,Desc1,Desc2&$filter=dbstatus eq 2&$top=10"
+      publisherOptions:
+        queue_name: "PYCAT_OUTBOUND"
+        message_type: "BYDM"
+        message_version: "BYDM 2021.3.0"
+        message_receiver: "SAP.GLOBAL"
+    planogram-product:
+      triggerOptions:
+        path: "/ckb-planograms/v2/planograms/%s/products"
+        filter: "?$select=id,Desc3&$top=1"
+    planogram-performance:
+      triggerOptions:
+        path: "/ckb-planograms/v2/planograms/%s/performance"
+        filter: "?$select=replenishmentMax,replenishmentMin,dbKey,dbParentProductKey&$top=1"
+    planogram-fixtures:
+      triggerOptions:
+        path: "/ckb-planograms/v2/planograms/%s/fixtures"
+        filter: "?$select=dbKey,cubic,locationID&$top=1"
+  acknowledgement:
+    applicationReceiptAcknowledgement:
+      publisher: "outbound_jms"
+      publisherOptions:
+        queue_name: "ACK_MESSAGE"
+        message_type: "BYDM"
+        message_version: "BYDM 2021.3.0"
+        message_receiver: "ACK.GLOBAL"      
