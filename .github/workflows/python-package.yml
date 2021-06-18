@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: build executable
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: download git file
       uses: actions/checkout@v2
