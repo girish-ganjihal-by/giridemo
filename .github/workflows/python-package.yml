@@ -30,3 +30,9 @@ jobs:
       with:
         name: build
         path: pycatmanadapter\dist\connect-catman-adapter-exec-windows.tar.gz
+    - name: docker-login
+      env:
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
