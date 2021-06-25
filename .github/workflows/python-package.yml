@@ -11,28 +11,9 @@ jobs:
     name: build executable
     runs-on: windows-latest
     steps:
-    - name: download git file
-      uses: actions/checkout@v2
-    - name: configuration changes
-      run: | 
-        cd pycatmanadapter
-        python -m pip install pyinstaller
-        pyinstaller -p pycatmanadapter launch.py
-        xcopy  "config_repo"  "dist\launch\config_repo" /e /i /h
-        mkdir dist\launch\connect
-        mkdir dist\launch\connect\cps
-        copy connect\cps\adapter-cps.json dist\launch\connect\cps\
-        mkdir dist\launch\log
-        mkdir dist\launch\log\archived
-        tar -zcvf dist\connect-catman-adapter-exec-windows.tar.gz dist\launch
-    - name: Build
-      uses: actions/upload-artifact@v1
-      with:
-        name: build
-        path: pycatmanadapter\dist\connect-catman-adapter-exec-windows.tar.gz
     - name: docker-login
       env:
-        DOCKER_USER: ${{secrets.DOCKER_USER}}
-        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        DOCKER_USER: ${{Secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{Secrets.DOCKER_PASSWORD}}
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
