@@ -61,4 +61,4 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: build
-        path: pycatmanadapter/pycatmanadapter/dist/connect-catman-adapter-exec-linux.tar.gz 
+        path: dist/connect-catman-adapter-exec-linux.tar.gz 
