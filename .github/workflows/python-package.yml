@@ -33,6 +33,7 @@ jobs:
     - name: run Pyinstaller
       run: |
         python -m pip install pyinstaller
+        pyinstaller -p pycatmanadapter launch.py
     - name: run copy command
       run: |
         cp -r pycatmanadapter/config_repo  dist/launch/config_repo
