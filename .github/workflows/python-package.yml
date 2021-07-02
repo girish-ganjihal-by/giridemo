@@ -32,7 +32,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: run Pyinstaller
       run: |
-        pyinstaller -p pycatmanadapter pycatmanadapter/launch.py
+        python -m pip install pyinstaller
     - name: run copy command
       run: |
         cp -r pycatmanadapter/config_repo  dist/launch/config_repo
