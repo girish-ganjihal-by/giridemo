@@ -1,1 +1,15 @@
 
+name: Python package
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+    name: build executable
+    runs-on: windows-latest
+    steps:
+    - name: download git file
+      uses: actions/checkout@v2
