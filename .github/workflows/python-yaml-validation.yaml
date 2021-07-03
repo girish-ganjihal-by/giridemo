@@ -13,3 +13,10 @@ jobs:
     steps:
     - name: download git file
       uses: actions/checkout@v2
+    - name: install yamale
+      run: |
+        pip install yamale
+    - name: validate yaml files
+      run: |
+        cd pycatmanadapter\schema
+        yamale --schema schemaConfig.yaml
