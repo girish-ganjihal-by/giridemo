@@ -1,0 +1,32 @@
+store:
+  https:
+    tls:
+      keyStore:
+        password-secure: "changeme"
+        key:
+          password-secure: "changeme"
+      trustStore:
+        password-secure: "changeme"
+
+publishers:
+  catman_api:
+    authorisation:
+      password-secure: 'ckbadmin'
+  catman_db:
+    password-secure: "password"
+  outbound_jms:
+    options:
+      password-secure: "admin"
+
+triggers:
+  inbound_jms:
+    options:
+      password-secure: "admin"
+
+user:
+  password-secure: "testpwd23423"
+  userName: "Elkjhop-Test"
+  email: "Elkjhop-1@gmail.com"
+  isWindowsUser: true
+  isLocked: false
+

@@ -1,6 +1,7 @@
 publishers:
   catman_api:
     publisher_type: "http"
+    type: "http"
     protocol: "http"
     disable_ssl_cert_verification: "true"
     host: "md1npdvjdapc01"
@@ -9,11 +10,16 @@ publishers:
       port : "7600"
       resourcePath : "/IAM/connect/token"
       username : 'ckbadmin'
-      client_id  : 'ResOwnerClient'
-      password : 'ckbadmin'
+      client_id : 'ResOwnerClient'
       grantType : 'password'
       scope : 'access'
   catman_db:
-    name: "CATMAN_DB"
-    host: dbhost
-    database: database
+    server: '127.0.0.1'
+    database: 'ckb'
+    username: 'sa'
+  outbound_jms:
+    type: "jms"
+    options:
+      username: "admin"
+      host: "localhost"
+      port: "61613"

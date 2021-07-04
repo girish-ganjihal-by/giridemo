@@ -1,0 +1,14 @@
+---
+Mappings:
+- modelMapping:
+    sourceModel: itemHierarchyLevelMember
+    targetModel: productHierarchy
+    fieldMapping:
+    - sourceField: itemHierarchyInformation.ancestry.memberId
+      targetField: parent
+    - sourceField: itemHierarchyLevelMemberId
+      targetField: code
+    - sourceField: itemHierarchyInformation.memberName
+      targetField: description
+    - sourceField: itemHierarchyInformation.hierarchyLevelId
+      targetField: keylevel

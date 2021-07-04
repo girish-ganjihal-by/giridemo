@@ -1,0 +1,19 @@
+triggers:
+  inbound_jms:
+    type: "jms"
+    options:
+      username: "admin"
+      host: "localhost"
+      port: "61613"
+      queueName: "PYCAT_INBOUND"
+      consumerCount: "1"
+  planogram_scheduler:
+    type: "scheduler"
+    options:
+      frequency: "Daily"
+      time: "19:34"
+  floorplan_scheduler:
+    type: "scheduler"
+    options:
+      frequency: "Daily"
+      time: "18:16"
