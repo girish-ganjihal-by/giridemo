@@ -1,6 +1,1118 @@
 ---
 Mappings:
 - modelMapping:
-    sourceModel: location
-    targetModel: store
-    
+    sourceModel: item
+    targetModel: product
+    fieldMapping:
+    - sourceField: itemId.additionalTradeItemId.value
+      targetField: upc
+      condition:
+        options:
+        - eq:
+            field: itemId.additionalTradeItemId.typeCode
+            value: "GTIN_12"
+    - sourceField: itemId.primaryId
+      targetField: id
+    - sourceField: description.value
+      targetField: name
+      condition:
+        options:
+        - eq:
+            field: description.descriptionType
+            value: ITEM_NAME
+    - sourceField: tradeItemMeasurements.width.value
+      targetField: width
+    - sourceField: tradeItemMeasurements.height.value
+      targetField: Height
+    - sourceField: tradeItemMeasurements.depth.value
+      targetField: Depth
+    - sourceField: description.value
+      targetField: AbbrevName
+      condition:
+        options:
+        - eq:
+            field: description.descriptionType
+            value: "SHORT_NAME"
+    - sourceField: tradeItemMeasurements.netContent.value
+      targetField: Size
+    - sourceField: tradeItemMeasurements.netContent.measurementUnitCode
+      targetField: UOM
+    - sourceField: manufacturerOfTradeItem.primaryId
+      targetField: Manufacturer
+    - sourceField: itemHierarchyInformation.ancestry.memberId
+      targetField: Category
+      condition:
+        options:
+        - eq:
+            field: itemHierarchyInformation.ancestry.hierarchyLevelId
+            value: CM Category Level
+    - sourceField: supplierOfTradeItem.primaryId
+      targetField: Supplier
+    - sourceField: itemLogisticUnitInformation.itemLogisticUnit.childPackageLevel.childPackageLevelQuantity
+      targetField: InnerPack
+    - sourceField: tradeItemMeasurements.tradeItemNesting.nestingIncrement.value
+      targetField: XNesting
+      condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.tradeItemNesting.nestingDirectionCode
+            value: HORIZONTAL
+    - sourceField: tradeItemMeasurements.tradeItemNesting.nestingIncrement.value
+      targetField: YNesting
+      condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.tradeItemNesting.nestingDirectionCode
+            value: VERTICAL
+    - sourceField: tradeItemMeasurements.tradeItemNesting.nestingIncrement.value
+      targetField: ZNesting
+      condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.tradeItemNesting.nestingDirectionCode
+            value: Z_AXIS
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+      targetField: Pegholes
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegHorizontal.value
+      targetField: PegholeX
+      condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '1'
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegVertical.value
+      targetField: PegholeY
+      condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '1'
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegHoleWidth.value
+      targetField: PegholeWidth
+      condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '1'
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegHorizontal.value
+      targetField: Peghole2X
+      condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '2'
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegVertical.value
+      targetField: Peghole2Y
+      condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '2'
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegHoleWidth.value
+      targetField: Peghole2Width
+      condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '2'
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegHorizontal.value
+      targetField: Peghole3X
+      condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '3'
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegVertical.value
+      targetField: Peghole3Y
+      condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '3'
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegHoleWidth.value
+      targetField: Peghole3Width
+      condition:
+        options:
+        - eq:
+            field: tradeItemMeasurements.pegMeasurements.pegHoleNumber
+            value: '3'
+    - sourceField: classifications.packageStyle
+      targetField: PackageStyle
+    - sourceField: tradeItemMeasurements.pegMeasurements.pegId
+      targetField: PegID
+    - sourceField: itemDisplay.minimumFingerSpaceAbove
+      targetField: FingerSpaceY
+    - sourceField: itemDisplay.jumbleFactor
+      targetField: JumbleFactor
+    - sourceField: financialInformation.unitRetailPrice.value
+      targetField: price
+    - sourceField: financialInformation.casecost.value
+      targetField: CaseCost
+    - sourceField: financialInformation.taxCode
+      targetField: TaxCode
+    - sourceField: operationalRules.unitMovement
+      targetField: UnitMovement
+    - sourceField: operationalRules.daysOfSupplyRequired
+      targetField: DaysSupply
+    - sourceField: tradeItemMeasurements.horizontalPegHoleCount
+      targetField: PegSpan
+    - sourceField: itemDisplay.merchandisingStyle.width.value
+      targetField: TrayWidth
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.height.value
+      targetField: TrayHeight
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.depth.value
+      targetField: TrayDepth
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsWide
+      targetField: TrayNumberWide
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsHigh
+      targetField: TrayNumberHigh
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsDeep
+      targetField: TrayNumberDeep
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.totalQuantityOfUnits
+      targetField: TrayTotalNumber
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.stackingLimit
+      targetField: TrayMaxHigh
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: TRAY
+    - sourceField: itemDisplay.merchandisingStyle.width.value
+      targetField: CaseWidth
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.height.value
+      targetField: CaseHeight
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.depth.value
+      targetField: CaseDepth
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsWide
+      targetField: CaseNumberWide
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsHigh
+      targetField: CaseNumberHigh
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsDeep
+      targetField: CaseNumberDeep
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.totalQuantityOfUnits
+      targetField: CaseTotalNumber
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.stackingLimit
+      targetField: CaseMaxHigh
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: CASE
+    - sourceField: itemDisplay.merchandisingStyle.width.value
+      targetField: DisplayWidth
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.height.value
+      targetField: DisplayHeight
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.depth.value
+      targetField: DisaplyDepth
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsWide
+      targetField: DisaplyNumberWide
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsHigh
+      targetField: DisplayNumberHigh
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsDeep
+      targetField: DisplayNumberDeep
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.totalQuantityOfUnits
+      targetField: DisplayTotalNumber
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.stackingLimit
+      targetField: DisplayMaxHigh
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: DISPLAY
+    - sourceField: itemDisplay.merchandisingStyle.width.value
+      targetField: AlternateWidth
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.height.value
+      targetField: AlternateHeight
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.depth.value
+      targetField: AlteernateDepth
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsWide
+      targetField: AlternateNumberWide
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsHigh
+      targetField: AlternateNumberHigh
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsDeep
+      targetField: AlternateNumberDeep
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.totalQuantityOfUnits
+      targetField: AlternateTotalNumber
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.stackingLimit
+      targetField: AlternateMaxHigh
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: ALTERNATE
+    - sourceField: itemDisplay.merchandisingStyle.width.value
+      targetField: LooseWidth
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.height.value
+      targetField: LooseHeight
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.depth.value
+      targetField: LooseDepth
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsWide
+      targetField: LooseNumberWide
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsHigh
+      targetField: LooseNumberHigh
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.quantityOfUnitsDeep
+      targetField: LooseNumberDeep
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.totalQuantityOfUnits
+      targetField: LooseTotalNumber
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: itemDisplay.merchandisingStyle.stackingLimit
+      targetField: LooseMaxHigh
+      condition:
+        options:
+        - eq:
+            field: itemDisplay.merchandisingStyle.displayType
+            value: LOOSE
+    - sourceField: financialInformation.unitCost.value
+      targetField: value50
+    - sourceField: classifications.itemForm
+      targetField: Desc2
+    - sourceField: classifications.flavorOrScent
+      targetField: Desc3
+    - sourceField: description.value
+      targetField: Desc5
+    - sourceField: classifications.usageStyle
+      targetField: Desc4
+    - sourceField: operationalRules.shelfLife
+      targetField: Desc6
+    - sourceField: description.value
+      targetField: Desc7
+      condition:
+        options:
+        - eq:
+            field: description.descriptionType
+            value: Pack
+    - sourceField: classifications.consumptionType
+      targetField: Desc8
+    - sourceField: classifications.packageStyle
+      targetField: Desc9
+    - sourceField: avpList.value
+      targetField: Desc10
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC10"
+    - sourceField: classifications.ethnicity
+      targetField: Desc11
+    - sourceField: avpList.value
+      targetField: Desc12
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC12"
+    #condition need to specify properly
+    - sourceField: classifications.handlingInstruction.transportTemperature.maximumTemperature
+      targetField: Desc13
+    - sourceField: classifications.consumerDecisionTree.lineNumber.value
+      targetField: Desc14
+      condition:
+        options:
+        - eq:
+            field: classifications.consumerDecisionTree.lineNumber
+            value: "1"
+    - sourceField: classifications.consumerDecisionTree.lineNumber.value
+      targetField: Desc15
+      condition:
+        options:
+        - eq:
+            field: classifications.consumerDecisionTree.lineNumber
+            value: "2"
+    - sourceField: classifications.consumerDecisionTree.lineNumber.value
+      targetField: Desc16
+      condition:
+        options:
+        - eq:
+            field: classifications.consumerDecisionTree.lineNumber
+            value: "3"
+    - sourceField: classifications.consumerDecisionTree.lineNumber.value
+      targetField: Desc17
+      condition:
+        options:
+        - eq:
+            field: classifications.consumerDecisionTree.lineNumber
+            value: "4"
+    - sourceField: classifications.consumerDecisionTree.lineNumber.value
+      targetField: Desc18
+      condition:
+        options:
+        - eq:
+            field: classifications.consumerDecisionTree.lineNumber
+            value: "5"
+    - sourceField: avpList.value
+      targetField: Desc19
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC19"
+    - sourceField: avpList.value
+      targetField: Desc20
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC20"
+    - sourceField: avpList.value
+      targetField: Desc21
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC21"
+    - sourceField: avpList.value
+      targetField: Desc22
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC22"
+    - sourceField: avpList.value
+      targetField: Desc23
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC23"
+    - sourceField: avpList.value
+      targetField: Desc24
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC24"
+    - sourceField: avpList.value
+      targetField: Desc25
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC25"
+    - sourceField: avpList.value
+      targetField: Desc26
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC26"
+    - sourceField: avpList.value
+      targetField: Desc20
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC27"
+    - sourceField: avpList.value
+      targetField: Desc28
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC28"
+    - sourceField: avpList.value
+      targetField: Desc29
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC29"
+    - sourceField: avpList.value
+      targetField: Desc30
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC30"
+    - sourceField: avpList.value
+      targetField: Desc31
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC31"
+    - sourceField: avpList.value
+      targetField: Desc32
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC32"
+    - sourceField: classifications.dietType
+      targetField: Desc33
+    - sourceField: avpList.value
+      targetField: Desc34
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC34"
+    - sourceField: avpList.value
+      targetField: Desc35
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC35"
+    - sourceField: avpList.value
+      targetField: Desc36
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC36"
+    - sourceField: avpList.value
+      targetField: Desc37
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC37"
+    - sourceField: avpList.value
+      targetField: Desc38
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC38"
+    - sourceField: salesRestriction
+      targetField: Desc39
+    - sourceField: avpList.value
+      targetField: Desc40
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC40"
+    - sourceField: avpList.value
+      targetField: Desc41
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC41"
+    - sourceField: avpList.value
+      targetField: Desc42
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC42"
+    - sourceField: avpList.value
+      targetField: Desc43
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC43"
+    - sourceField: avpList.value
+      targetField: Desc44
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC44"
+    - sourceField: avpList.value
+      targetField: Desc45
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC45"
+    - sourceField: avpList.value
+      targetField: Desc46
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC46"
+    - sourceField: avpList.value
+      targetField: Desc47
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC47"
+    - sourceField: avpList.value
+      targetField: Desc48
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC48"
+    - sourceField: avpList.value
+      targetField: Desc49
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC49"
+    - sourceField: avpList.value
+      targetField: Desc50
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "DESC50"
+    - sourceField: avpList.value
+      targetField: Value1
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value1"
+    - sourceField: avpList.value
+      targetField: Value2
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value2"
+    - sourceField: avpList.value
+      targetField: Value3
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value3"
+    - sourceField: avpList.value
+      targetField: Value4
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value4"
+    - sourceField: avpList.value
+      targetField: Value5
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value5"
+    - sourceField: avpList.value
+      targetField: Value6
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value6"
+    - sourceField: avpList.value
+      targetField: Value7
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value7"
+    - sourceField: avpList.value
+      targetField: Value8
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value8"
+    - sourceField: avpList.value
+      targetField: Value9
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value9"
+    - sourceField: avpList.value
+      targetField: Value10
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value10"
+    - sourceField: avpList.value
+      targetField: Value11
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value11"
+    - sourceField: avpList.value
+      targetField: Value12
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value12"
+    - sourceField: avpList.value
+      targetField: Value13
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value13"
+    - sourceField: avpList.value
+      targetField: Value14
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value14"
+    - sourceField: avpList.value
+      targetField: Value15
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value15"
+    - sourceField: avpList.value
+      targetField: Value16
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value16"
+    - sourceField: avpList.value
+      targetField: Value17
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value17"
+    - sourceField: avpList.value
+      targetField: Value18
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value18"
+    - sourceField: avpList.value
+      targetField: Value19
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value19"
+    - sourceField: avpList.value
+      targetField: Value20
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value20"
+    - sourceField: avpList.value
+      targetField: Value21
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value21"
+    - sourceField: avpList.value
+      targetField: Value22
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value22"
+    - sourceField: avpList.value
+      targetField: Value23
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value23"
+    - sourceField: avpList.value
+      targetField: Value24
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value24"
+    - sourceField: avpList.value
+      targetField: Value25
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value25"
+    - sourceField: avpList.value
+      targetField: Value26
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value26"
+    - sourceField: avpList.value
+      targetField: Value27
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value27"
+    - sourceField: avpList.value
+      targetField: Value28
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value28"
+    - sourceField: avpList.value
+      targetField: Value29
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value29"
+    - sourceField: avpList.value
+      targetField: Value30
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value30"
+    - sourceField: avpList.value
+      targetField: Value31
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value31"
+    - sourceField: avpList.value
+      targetField: Value32
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value32"
+    - sourceField: classifications.dietType
+      targetField: Value33
+    - sourceField: avpList.value
+      targetField: Value34
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value34"
+    - sourceField: avpList.value
+      targetField: Value35
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value35"
+    - sourceField: avpList.value
+      targetField: Value36
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value36"
+    - sourceField: avpList.value
+      targetField: Value37
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value37"
+    - sourceField: avpList.value
+      targetField: Value38
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value38"
+    - sourceField: salesRestriction
+      targetField: Value39
+    - sourceField: avpList.value
+      targetField: Value40
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value40"
+    - sourceField: avpList.value
+      targetField: Value41
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value41"
+    - sourceField: avpList.value
+      targetField: Value42
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value42"
+    - sourceField: avpList.value
+      targetField: Value43
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value43"
+    - sourceField: avpList.value
+      targetField: Value44
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value44"
+    - sourceField: avpList.value
+      targetField: Value45
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value45"
+    - sourceField: avpList.value
+      targetField: Value46
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value46"
+    - sourceField: avpList.value
+      targetField: Value47
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value47"
+    - sourceField: avpList.value
+      targetField: Value48
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value48"
+    - sourceField: avpList.value
+      targetField: Value49
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value49"
+    - sourceField: avpList.value
+      targetField: Value50
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Value50"
+    - sourceField: classifications.isBaseAssortmentItem
+      targetField: Flag1
+    - sourceField: classifications.handlingInstruction.handlingInstructionCode
+      targetField: Flag2
+      condition:
+        options:
+        - eq:
+            field: classifications.handlingInstruction.handlingInstructionCode
+            value: 'PER'
+    - sourceField: classifications.isSeasonal
+      targetField: Flag3
+    - sourceField: classifications.isControlledSubstance
+      targetField: Flag4
+    - sourceField: classifications.isPromotional
+      targetField: Flag5
+    - sourceField: avpList.value
+      targetField: Flag6
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Flag6"
+    - sourceField: classifications.isOrganic
+      targetField: Flag7
+    - sourceField: avpList.value
+      targetField: Flag8
+      condition:
+        options:
+        - eq:
+            field: avpList.name
+            value: "Flag8"
+    - sourceField: classifications.isPrivateLabel
+      targetField: Flag9
+    - sourceField: classifications.isEverydayLowPriceItem
+      targetField: Flag10
+    - sourceField: classifications.brandName
+      targetField: Brand
+    - sourceField: itemHierarchyInformation.ancestry.memberId
+      targetField: Subcategory
+    - sourceField: tradeItemMeasurements.tradeItemWeight.grossWeight.value
+      targetField: Weight
+    - sourceField: itemDisplay.minimumFingerSpaceToRight
+      targetField: FingerSpaceX
+    - sourceField: creationDateTime
+      targetField: DateCreated
+    - sourceField: status.effectiveFromDateTime
+      targetField: DBDateEffectiveFrom
+    - sourceField: status.effectiveUpToDateTime
+      targetField: DBDateEffectiveTo
