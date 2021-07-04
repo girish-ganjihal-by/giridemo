@@ -1,143 +1,34 @@
-publishers: include('publishers',required=False)
-triggers: include('triggers',required=False)
-workflows: include('workflows',required=False)
 ---
-publishers:
-  catman_api: include('catman_api',required=False)
-  catman_db: include('catman_db',required=False)
-  outbound_jms: include('outbound_jms',required=False)
-catman_api:
-  publisher_type: str()
-  type: str()
-  protocol: str()
-  disable_ssl_cert_verification: str()
-  host: str()
-  port: str()
-  authorisation:
-      port: str()
-      resourcePath: str()
-      username: str()
-      client_id: str()
-      grantType: str()
-      scope: str()
-catman_db:
-  server: str()
-  database: str()
-  username: str()
-outbound_jms:
-  type: str()
-  options:
-      username: str()
-      host: str()
-      port: str()
-triggers:
-  inbound_jms: include('inbound_jms',required=False)
-  planogram_scheduler: include('planogram_scheduler',required=False)
-  floorplan_scheduler: include('floorplan_scheduler',required=False)
-inbound_jms:
-  type: str()
-  options:
-    username: str()
-    host: str()
-    port: str()
-    queueName: str()
-    consumerCount: str()
-planogram_scheduler:
-  type: str()
-  options:
-    frequency: str()
-    time: str()
-floorplan_scheduler:
-  type: str()
-  options:
-    frequency: str()
-    time: str()
-workflows:
-  inbound:
-    location:
-      trigger: str()
-      publisher: str()
-      publisherOptions:
-        path: str()
-        db_parent_prc_key: str()
-        filter: str()
-        filterField: str()
-    item:
-      trigger: str()
-      publisher: str()
-      publisherOptions:
-        path: str()
-        db_parent_prc_key: str()
-        filter: str()
-        filterField: str()
-    itemHierarchyLevelMember:
-      publisher: str()
-    floorplan:
-      publisher: str()
-      publisherOptions:
-        path: str()
-        filterStoreNoBasedFetch: str()
-        pathPerFloorplan: str()
-        db_parent_prc_key: str()
-    user:
-      publisher: str()
-      publisherOptions:
-        path: str()
-        db_parent_prc_key: str()
-    userRole:
-      publisher: str()
-      publisherOptions:
-        path: str()
-        db_parent_prc_key: str()
-        filter: str()
-        filterField: str()
-    roleGroup:
-      publisher: str()
-      publisherOptions:
-        path: str()
-        db_parent_prc_key: str()
-        pathPerRoleGroup: str()
-        pathForRoleAssignment: str()
-  outbound:
-    floorplan:
-      trigger: str()
-      publisher: str()
-      triggerOptions:
-        path: str()
-        filter: str()
-      publisherOptions:
-        queue_name: str()
-        message_type: str()
-        message_version: str()
-        message_receiver: str()
-    planogram:
-      trigger: str()
-      publisher: str()
-      triggerOptions:
-        path: str()
-        filter: str()
-      publisherOptions:
-        queue_name: str()
-        message_type: str()
-        message_version: str()
-        message_receiver: str()
-    planogram-product:
-      triggerOptions:
-        path: str()
-        filter: str()
-    planogram-performance:
-      triggerOptions:
-        path: str()
-        filter: str()
-    planogram-fixtures:
-      triggerOptions:
-        path: str()
-        filter: str()
-  acknowledgement:
-    applicationReceiptAcknowledgement:
-      publisher: str()
-      publisherOptions:
-        queue_name: str()
-        message_type: str()
-        message_version: str()
-        message_receiver: str()
+Mappings:
+- modelMapping:
+    sourceModel: location
+    targetModel: store
+    fieldMapping:
+    - sourceField: basicLocation.locationName
+      targetField: name
+    - sourceField: locationId
+      targetField: storenumber
+    - sourceField: basicLocation.address.streetAddressOne
+      targetField: address1
+    - sourceField: basicLocation.address.streetAddressTwo
+      targetField: address2
+    - sourceField: basicLocation.address.city
+      targetField: addresscity
+    - sourceField: basicLocation.address.state
+      targetField: addressstate
+    - sourceField: basicLocation.address.postalCode
+      targetField: addresspostalcode
+    - sourceField: basicLocation.address.countryCode
+      targetField: addresscountry
+    - sourceField: basicLocation.contact.communicationChannel.communicationValue
+      targetField: email
+    - sourceField: locationHierarchyInformation.ancestry.memberIdentifier
+      targetField: region
+    - sourceField: parentParty.primaryId
+      targetField: company
+    - sourceField: retailDetails.storeFormat
+      targetField: desc11
+    - sourceField: basicLocation.status.effectiveFromDate
+      targetField: dbdateeffectivefrom
+    - sourceField: basicLocation.status.effectiveUpToDate
+      targetField: dbdateeffectiveto
