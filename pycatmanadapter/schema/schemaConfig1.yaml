@@ -1,6 +1,6 @@
 ---
 Mappings:
-- modelMapping:
+- modelapping:
     sourceModel: location
     targetModel: store
     fieldMapping:
