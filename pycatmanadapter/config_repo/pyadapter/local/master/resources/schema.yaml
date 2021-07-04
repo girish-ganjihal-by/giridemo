@@ -1,0 +1,37 @@
+Mappings: list(include('Mappings'))
+
+---
+Mappings:
+  modelMapping:
+    sourceModel: str()
+    targetModel: str()
+    fieldMapping: list(include('fieldMapping'),required=False)
+    segmentListMapping: list(include('segmentListMapping'),required=False)
+segmentListMapping:
+  targetSegment: str()
+  fieldMapping: list(include('fieldMapping'),required=False)
+  targetField: include('targetField',required=False)
+  default: include('default',required=False)
+  sourceField: include('sourceField',required=False)
+  sourceSegment: include('sourceSegment',required=False)
+  segmentListMapping: list(include('segmentListMapping'),required=False)
+sourceField: str()
+default: str()
+targetField: str()
+sourceSegment: str()
+fieldMapping:
+  sourceField: include('sourceField',required=False)
+  targetField: str()
+  resourceField: include('resourceField',required=False)
+  default: include('default',required=False)
+  condition: include('condition',required=False)
+sourceField: str()
+default: str()
+resourceField: str()
+condition:
+  options: list(include('options'),required=False)
+options:
+  eq:
+    field: str()
+    value: str()
+
