@@ -3,32 +3,4 @@ Mappings:
 - modelMapping:
     sourceModel: location
     targetModel: store
-    fieldMapping:
-    - sourceField: basicLocation.locationName
-      targetField: name
-    - sourceField: locationId
-      targetField: storenumber
-    - sourceField: basicLocation.address.streetAddressOne
-      targetField: address1
-    - sourceField: basicLocation.address.streetAddressTwo
-      targetField: address2
-    - sourceField: basicLocation.address.city
-      targetField: addresscity
-    - sourceField: basicLocation.address.state
-      targetField: addressstate
-    - sourceField: basicLocation.address.postalCode
-      targetField: addresspostalcode
-    - sourceField: basicLocation.address.countryCode
-      targetField: addresscountry
-    - sourceField: basicLocation.contact.communicationChannel.communicationValue
-      targetField: email
-    - sourceField: locationHierarchyInformation.ancestry.memberIdentifier
-      targetField: region
-    - sourceField: parentParty.primaryId
-      targetField: company
-    - sourceField: retailDetails.storeFormat
-      targetField: desc11
-    - sourceField: basicLocation.status.effectiveFromDate
-      targetField: dbdateeffectivefrom
-    - sourceField: basicLocation.status.effectiveUpToDate
-      targetField: dbdateeffectiveto
+    
