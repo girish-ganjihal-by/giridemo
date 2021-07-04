@@ -24,11 +24,11 @@ fieldMapping:
   targetField: str()
   resourceField: include('resourceField',required=False)
   default: include('default',required=False)
-  Condition: include('Condition',required=False)
+  condition: include('condition',required=False)
 sourceField: str()
 default: str()
 resourceField: str()
-Condition:
+condition:
   options: list(include('options'),required=False)
 options:
   eq:
