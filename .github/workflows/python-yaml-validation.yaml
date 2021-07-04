@@ -16,5 +16,5 @@ jobs:
         pip install yamale
     - name: validate yaml files
       run: |
-        cd pycatmanadapter\config_repo\pyadapter\local\master\resources
+        cd pycatmanadapter/config_repo/pyadapter/local/master/resources
         yamale --schema schema.yaml
