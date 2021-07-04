@@ -17,4 +17,4 @@ jobs:
     - name: validate yaml files
       run: |
         cd pycatmanadapter\config_repo\pyadapter\local\master\resources
-        yamale --schema schemaConfig.yaml
+        yamale --schema schema.yaml
