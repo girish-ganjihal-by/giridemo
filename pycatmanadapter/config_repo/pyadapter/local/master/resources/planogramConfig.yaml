@@ -1,0 +1,1227 @@
+---
+Mappings:
+- modelMapping:
+    sourceModel: planogram
+    targetModel: planogram
+    fieldMapping:
+    - targetField: creationDateTime
+      default: "current time"
+    - targetField: documentActionCode
+      default: "CHANGE_BY_REFRESH"
+    - targetField: documentStatusCode
+      default: "ORIGINAL"
+    - sourceField: dbstatus
+      targetField: dBStatus
+    - sourceField: dBkey
+      targetField: dBkey
+    - sourceField: dbDateEffectiveFrom
+      targetField: dBDateTimeEffectiveFrom
+    - sourceField: dBkey1
+      targetField: dBkey1
+    - sourceField: dBkey2
+      targetField: dBkey2
+    - sourceField: dBkey3
+      targetField: dBkey3
+    - sourceField: dBkey4
+      targetField: dBkey4
+    - sourceField: dBkey5
+      targetField: dBkey5
+    - sourceField: dBkey6
+      targetField: dBkey6
+    - sourceField: dBkey7
+      targetField: dBkey7
+    - sourceField: dBkey8
+      targetField: dBkey8
+    - sourceField: dBkey9
+      targetField: dBkey9
+    - sourceField: dBkey10
+      targetField: dBkey10
+    - sourceField: name
+      targetField: name
+    - sourceField: width
+      targetField: width
+    - sourceField: height
+      targetField: height
+    - sourceField: depth
+      targetField: depth
+    - sourceField: color
+      targetField: color
+    - sourceField: backDepth
+      targetField: backDepth
+    - sourceField: drawBack
+      targetField: drawBack
+    - sourceField: baseWidth
+      targetField: baseWidth
+    - sourceField: baseHeight
+      targetField: baseHeight
+    - sourceField: baseDepth
+      targetField: baseDepth
+    - sourceField: drawBase
+      targetField: isBaseDrawn
+    - sourceField: baseColor
+      targetField: baseColor
+    - sourceField: drawNotches
+      targetField: areNotchesDrawn
+    - sourceField: notchOffset
+      targetField: notchOffset
+    - sourceField: notchSpacing
+      targetField: notchSpacing
+    - sourceField: doubleNotches
+      targetField: isDoubleNotch
+    - sourceField: notchColor
+      targetField: notchColor
+    - sourceField: notchMarks
+      targetField: drawNotchMarks
+    - sourceField: drawPegs
+      targetField: arePegsDrawn
+    - sourceField: drawPegholes
+      targetField: arePegHolesDrawn
+    - sourceField: trafficFlow
+      targetField: trafficFlow
+    - sourceField: shapeID
+      targetField: shapeIdentification
+    - sourceField: bitmapID
+      targetField: pictureIdentification
+    - sourceField: merchXMin
+      targetField: merchandiseXMinimum
+    - sourceField: merchXMax
+      targetField: merchandiseXMaximum
+    - sourceField: merchXUprights
+      targetField: merchandiseXUprights
+    - sourceField: merchXCaps
+      targetField: merchandiseXCaps
+    - sourceField: merchXPlacement
+      targetField: merchandiseXPlacement
+    - sourceField: merchXNumber
+      targetField: merchandiseXNumber
+    - sourceField: merchXSize
+      targetField: merchandiseXSize
+    - sourceField: merchXDirection
+      targetField: merchandiseXDirection
+    - sourceField: merchYMin
+      targetField: merchandiseYMinimum
+    - sourceField: merchYMax
+      targetField: merchandiseYMaximum
+    - sourceField: merchYUprights
+      targetField: merchandiseYUprights
+    - sourceField: merchYCaps
+      targetField: merchandiseYCaps
+    - sourceField: merchYPlacement
+      targetField: merchandiseYPlacement
+    - sourceField: merchYNumber
+      targetField: merchandiseYNumber
+    - sourceField: merchYSize
+      targetField: merchandiseYSize
+    - sourceField: merchYDirection
+      targetField: merchandiseYDirection
+    - sourceField: merchZMin
+      targetField: merchandiseZMinimum
+    - sourceField: merchZMax
+      targetField: merchandiseZMaximum
+    - sourceField: merchZUprights
+      targetField: merchandiseZUprights
+    - sourceField: merchZCaps
+      targetField: merchandiseZCaps
+    - sourceField: merchZPlacement
+      targetField: merchandiseZPlacement
+    - sourceField: merchZNumber
+      targetField: merchandiseZNumber
+    - sourceField: merchZSize
+      targetField: merchandiseZSize
+    - sourceField: merchZDirection
+      targetField: merchandiseZDirection
+    - sourceField: numberOfFixtures
+      targetField: numberOfFixtures
+    - sourceField: numberOfSegments
+      targetField: numberOfSegments
+    - sourceField: numberOfDrawing
+      targetField: numberOfDrawings
+    - sourceField: combinedPerformanceIndex
+      targetField: combinedPerformanceIndex
+    - sourceField: sales
+      targetField: sales
+    - sourceField: cost
+      targetField: cost
+    - sourceField: margin
+      targetField: margin
+    - sourceField: capacityCost
+      targetField: capacityCost
+    - sourceField: capacityRetail
+      targetField: capacityRetail
+    - sourceField: annualProfit
+      targetField: annualProfit
+    - sourceField: rOIICost
+      targetField: rOIICost
+    - sourceField: rOIIRetail
+      targetField: rOIIRetail
+    - sourceField: notchWidth
+      targetField: notchWidth
+    - sourceField: fillPattern
+      targetField: fillPattern
+    - sourceField: notes
+      targetField: notes
+    - sourceField: movement
+      targetField: movement
+    - sourceField: capacity
+      targetField: capacity
+    - sourceField: numberOfProductsAllocated
+      targetField: numberOfProductsAllocated
+    - sourceField: salesAllocated
+      targetField: salesAllocated
+    - sourceField: costAllocated
+      targetField: costAllocated
+    - sourceField: movementAllocated
+      targetField: movementAllocated
+    - sourceField: marginAllocated
+      targetField: marginAllocated
+    - sourceField: annualProfitAllocated
+      targetField: annualProfitAllocated
+    - sourceField: status1
+      targetField: statusDescription
+    - sourceField: createdBy
+      targetField: createdBy
+    - sourceField: modifiedBy
+      targetField: modifiedBy
+    - sourceField: warningsCount
+      targetField: warningsCount
+    - sourceField: dBDateEffectiveTo
+      targetField: dBDateTimeEffectiveTo
+    - sourceField: dBVersionKey
+      targetField: dBVersionKey
+    - sourceField: floorBitmapID
+      targetField: floorPictureIdentification
+    - sourceField: doorTransparency
+      targetField: doorTransparency
+    - sourceField: department
+      targetField: department
+    - sourceField: combinedPerfIndexAllocated
+      targetField: combinedPerformanceIndexAllocated
+    - sourceField: rOIICostAllocated
+      targetField: rOIICostAllocated
+    - sourceField: rOIIRetailAllocated
+      targetField: rOIIRetailAllocated
+    - sourceField: partID
+      targetField: partIdentification
+    - sourceField: profit
+      targetField: profit
+    - sourceField: profitAllocated
+      targetField: profitAllocated
+    - sourceField: capacityUnrestricted
+      targetField: capacityUnrestricted
+    - sourceField: gLN
+      targetField: additionalPartyId
+    - sourceField: customData
+      targetField: customData
+    - sourceField: planogramGUID
+      targetField: planogramGUID
+    - sourceField: dBGUID
+      targetField: dBGUID
+    - sourceField: authorityLevel
+      targetField: authorityLevel
+    - sourceField: performanceUpdateStatus
+      targetField: performanceUpdateStatus
+    - sourceField: source
+      targetField: source
+    - sourceField: numberOfRecommendations
+      targetField: numberOfRecommendations
+    - sourceField: dBFamilyKey
+      targetField: dBFamilyKey
+    - sourceField: pGScorePercent
+      targetField: planogramScorePercentage
+    - sourceField: pGScoreNote
+      targetField: planogramScoreNote
+    - sourceField: pGWarningsCount
+      targetField: planogramWarningsCount
+    - sourceField: pGErrorsCount
+      targetField: planogramErrorsCount
+    - sourceField: dBParentPGTemplateKey
+      targetField: dBParentPlanogramTemplateKey
+    - sourceField: dBParentPGAuxTemplateKey
+      targetField: dBParentPlanogramAuxiliaryTemplateKey
+    - sourceField: pGType
+      targetField: planogramType
+    - sourceField: dBParentPGSourceKey
+      targetField: dBParentPlanogramSourceKey
+    - sourceField: abbrevName
+      targetField: abbreviatedName
+    - sourceField: category
+      targetField: category
+    - sourceField: subcategory
+      targetField: subcategory
+    - sourceField: uOM
+      targetField: measurementUnitCode
+    - sourceField: dBParentAccountKey
+      targetField: dBParentAccountKey
+    - sourceField: useAsSubplanogram
+      targetField: useAsSubplanogram
+    - sourceField: numberOfSubplanogramSpaces
+      targetField: numberOfSubPlanogramSpaces
+    segmentListMapping:
+    - targetSegment: planogramFixture
+      sourceSegment: fixture
+      fieldMapping:
+      - sourceField: dBParentPlanogramKey
+        targetField: dBParentPlanogramKey
+      segmentMapping:
+      - targetSegment: fixtureDetails
+        fieldMapping:
+        - sourceField: dBKey
+          targetField: dBKey
+        - sourceField: name
+          targetField: name
+        - sourceField: type
+          targetField: fixtureClassification
+        - sourceField: x
+          targetField: xPosition
+        - sourceField: width
+          targetField: width
+        - sourceField: y
+          targetField: yPosition
+        - sourceField: height
+          targetField: height
+        - sourceField: z
+          targetField: zPosition
+        - sourceField: depth
+          targetField: depth
+        - sourceField: slope
+          targetField: slope
+        - sourceField: angle
+          targetField: angle
+        - sourceField: roll
+          targetField: roll
+        - sourceField: color
+          targetField: color
+        - sourceField: xSpacing
+          targetField: xSpacing
+        - sourceField: ySpacing
+          targetField: ySpacing
+        - sourceField: xStart
+          targetField: xStart
+        - sourceField: yStart
+          targetField: yStart
+        - sourceField: wallWidth
+          targetField: wallWidth
+        - sourceField: wallHeight
+          targetField: wallHeight
+        - sourceField: wallDepth
+          targetField: wallDepth
+        - sourceField: curve
+          targetField: curve
+        - sourceField: merch
+          targetField: merch
+        - sourceField: leftOverhang
+          targetField: leftOverhang
+        - sourceField: rightOverhang
+          targetField: rightOverhang
+        - sourceField: lowerOverhang
+          targetField: lowerOverhang
+        - sourceField: upperOverhang
+          targetField: upperOverhang
+        - sourceField: backOverhang
+          targetField: backOverhang
+        - sourceField: frontOverhang
+          targetField: frontOverhang
+        - sourceField: defaultMerchStyle
+          targetField: defaultMerchandiseStyle
+        - sourceField: dividerWidth
+          targetField: dividerWidth
+        - sourceField: dividerHeight
+          targetField: dividerHeight
+        - sourceField: dividerDepth
+          targetField: dividerDepth
+        - sourceField: canCombine
+          targetField: canCombineSpace
+        - sourceField: grilleHeight
+          targetField: grilleHeight
+        - sourceField: notchOffset
+          targetField: notchOffset
+        - sourceField: xSpacing2
+          targetField: secondaryXSpacing
+        - sourceField: xStart2
+          targetField: secondaryXStart
+        - sourceField: pegDrop
+          targetField: pegDrop
+        - sourceField: pegGapX
+          targetField: pegGapX
+        - sourceField: pegGapY
+          targetField: pegGapY
+        - sourceField: shapeID
+          targetField: shapeIdentification
+        - sourceField: bitmapID
+          targetField: pictureIdentification
+        - sourceField: merchXMin
+          targetField: merchandiseXMinimum
+        - sourceField: merchXMax
+          targetField: merchandiseXMaximum
+        - sourceField: merchXUprights
+          targetField: merchandiseXUprights
+        - sourceField: merchXCaps
+          targetField: merchandiseXCaps
+        - sourceField: merchXPlacement
+          targetField: merchandiseXPlacement
+        - sourceField: merchXNumber
+          targetField: merchandiseXNumber
+        - sourceField: merchXSize
+          targetField: merchandiseXSize
+        - sourceField: merchXDirection
+          targetField: merchandiseXDirection
+        - sourceField: merchYMin
+          targetField: merchandiseYMinimum
+        - sourceField: merchYMax
+          targetField: merchandiseYMaximum
+        - sourceField: merchYUprights
+          targetField: merchandiseYUprights
+        - sourceField: merchYCaps
+          targetField: merchandiseYCaps
+        - sourceField: merchYPlacement
+          targetField: merchandiseYPlacement
+        - sourceField: merchYNumber
+          targetField: merchandiseYNumber
+        - sourceField: merchYSize
+          targetField: merchandiseYSize
+        - sourceField: merchYDirection
+          targetField: merchandiseYDirection
+        - sourceField: merchZMin
+          targetField: merchandiseZMinimum
+        - sourceField: merchZMax
+          targetField: merchandiseZMaximum
+        - sourceField: merchZUprights
+          targetField: merchandiseZUprights
+        - sourceField: merchZCaps
+          targetField: merchandiseZCaps
+        - sourceField: merchZPlacement
+          targetField: merchandiseZPlacement
+        - sourceField: merchZNumber
+          targetField: merchandiseZNumber
+        - sourceField: merchZSize
+          targetField: merchandiseZSize
+        - sourceField: merchZDirection
+          targetField: merchandiseZDirection
+        - sourceField: numberOfPositions
+          targetField: numberOfPositions
+        - sourceField: numberOfDividers
+          targetField: numberOfDividers
+        - sourceField: linear
+          targetField: linearSpace
+        - sourceField: square
+          targetField: squareSpace
+        - sourceField: cubic
+          targetField: cubicSpace
+        - sourceField: columns
+          targetField: numberOfColumns
+        - sourceField: rows
+          targetField: numberOfRows
+        - sourceField: warning
+          targetField: warning
+        - sourceField: warningNumber
+          targetField: warningNumber
+        - sourceField: locationID
+          targetField: locationIdentification
+        - sourceField: fillPattern
+          targetField: fillPattern
+        - sourceField: xFilename
+          targetField: xFileName
+        - sourceField: segment
+          targetField: segment
+        - sourceField: firstSegment
+          targetField: firstSegment
+        - sourceField: lastSegment
+          targetField: lastSegment
+        - sourceField: availableLinear
+          targetField: availableLinearSpace
+        - sourceField: availableSquare
+          targetField: availableSquareSpace
+        - sourceField: availableCubic
+          targetField: availableCubicSpace
+        - sourceField: weightCapacity
+          targetField: weightCapacity
+        - sourceField: notch
+          targetField: notch
+        - sourceField: dividerAtStart
+          targetField: dividerAtStart
+        - sourceField: dividerAtEnd
+          targetField: dividerAtEnd
+        - sourceField: dividersBetweenFacings
+          targetField: dividersBetweenFacings
+        - sourceField: spaceAbove
+          targetField: spaceAbove
+        - sourceField: hideIfPrinting
+          targetField: hideIfPrinting
+        - sourceField: productAssociation
+          targetField: productAssociation
+        - sourceField: partID
+          targetField: partIdentification
+        - sourceField: gLN
+          targetField: gln
+        - sourceField: customData
+          targetField: customData
+        - sourceField: combinedLinear
+          targetField: combinedLinearSpace
+        - sourceField: combinedSquare
+          targetField: combinedSquareSpace
+        - sourceField: combinedCubic
+          targetField: combinedCubicSpace
+        - sourceField: combinedAvailableLinear
+          targetField: combinedAvailableLinearSpace
+        - sourceField: combinedAvailableSquare
+          targetField: combinedAvailableSquareSpace
+        - sourceField: combinedAvailableCubic
+          targetField: combinedAvailableCubicSpace
+        - sourceField: combinedNumberOfPositions
+          targetField: combinedNumberOfPositions
+        - sourceField: combinedNumberOfDivider
+          targetField: combinedNumberOfDividers
+        - sourceField: canAttach
+          targetField: canAttach
+        - sourceField: isAttached
+          targetField: isAttached
+        - sourceField: isAttached
+          targetField: isAttached
+        - sourceField: attachedToFixture
+          targetField: attachedToFixture
+        - sourceField: rankX
+          targetField: rankX
+        - sourceField: rankY
+          targetField: rankY
+        - sourceField: rankZ
+          targetField: rankZ
+        - sourceField: numberOfAttachments
+          targetField: numberOfAttachments
+        - sourceField: combinedNumberOfAttachments
+          targetField: combinedNumberOfAttachments
+        - sourceField: fixtureGUID
+          targetField: fixtureGUID
+        - sourceField: fixtureGUID
+          targetField: dBParentFixtureKey
+    - targetSegment: planogramPerformance
+      sourceSegment: Performance
+      fieldMapping:
+      - sourceField: dBParentPlanogramKey
+        targetField: dBParentPlanogramKey
+      segmentMapping:
+      - targetSegment: performanceDetails
+        fieldMapping:
+        - sourceField: dBKey
+          targetField: dBKey
+        - sourceField: price
+          targetField: price
+        - sourceField: caseCost
+          targetField: caseCost
+        - sourceField: taxCode
+          targetField: taxCode
+        - sourceField: unitMovement
+          targetField: unitMovement
+        - sourceField: share
+          targetField: share
+        - sourceField: facings
+          targetField: facings
+        - sourceField: units
+          targetField: units
+        - sourceField: capacity
+          targetField: capacity
+        - sourceField: linear
+          targetField: linearSpace
+        - sourceField: square
+          targetField: squareSpace
+        - sourceField: cubic
+          targetField: cubicSpace
+        - sourceField: sales
+          targetField: sales
+        - sourceField: unitCost
+          targetField: unitCost
+        - sourceField: unitProfit
+          targetField: unitProfit
+        - sourceField: profit
+          targetField: profit
+        - sourceField: salesLinear
+          targetField: salesPerLinearSpace
+        - sourceField: salesSquare
+          targetField: salesPerSquareSpace
+        - sourceField: salesCubic
+          targetField: salesPerCubicSpace
+        - sourceField: profitLinear
+          targetField: profitLinearSpace
+        - sourceField: profitSquare
+          targetField: profitSquareSpace
+        - sourceField: profitCubic
+          targetField: profitCubicSpace
+        - sourceField: movementLinear
+          targetField: movementLinearSpace
+        - sourceField: movementSquare
+          targetField: movementSquareSpace
+        - sourceField: movementCubic
+          targetField: movementCubicSpace
+        - sourceField: turns
+          targetField: turns
+        - sourceField: movementPrcnt
+          targetField: movementPercentage
+        - sourceField: profitPrcnt
+          targetField: profitPercentage
+        - sourceField: linearPrcnt
+          targetField: linearPercentage
+        - sourceField: squarePrcnt
+          targetField: squarePercentage
+        - sourceField: cubicPrcnt
+          targetField: cubicPercentage
+        - sourceField: linearPrcntUsed
+          targetField: linearPercentageUsed
+        - sourceField: squarePrcntUsed
+          targetField: squarePercentageUsed
+        - sourceField: cubicPrcntUsed
+          targetField: cubicPercentageUsed
+        - sourceField: actualCaseMultiple
+          targetField: actualCaseMultiple
+        - sourceField: actualDaysSupply
+          targetField: actualDaysSupply
+        - sourceField: targetInventory
+          targetField: targetInventory
+        - sourceField: targetInventoryMerch
+          targetField: targetMerchandisedInventory
+        - sourceField: rOIICost
+          targetField: rOIICost
+        - sourceField: rOIIRetail
+          targetField: rOIIRetail
+        - sourceField: capacityCost
+          targetField: capacityCost
+        - sourceField: capacityRetail
+          targetField: capacityRetail
+        - sourceField: costBeforeTax
+          targetField: costBeforeTax
+        - sourceField: priceBeforeTax
+          targetField: priceBeforeTax
+        - sourceField: annualMovement
+          targetField: annualMovement
+        - sourceField: annualProfit
+          targetField: annualProfit
+        - sourceField: overstock
+          targetField: overstock
+        - sourceField: combinedPerformanceIndex
+          targetField: combinedPerformanceIndex
+        - sourceField: salesPrcnt
+          targetField: salesPercentage
+        - sourceField: caseMultiple
+          targetField: minimumCaseMultiple
+        - sourceField: daysSupply
+          targetField: daysOfSupply
+        - sourceField: peakSafetyFactor
+          targetField: peakSafetyFactor
+        - sourceField: backroomStock
+          targetField: backroomStock
+        - sourceField: minimumUnits
+          targetField: minimumUnits
+        - sourceField: maximumUnits
+          targetField: maximumUnits
+        - sourceField: deliverySchedule
+          targetField: deliverySchedule
+        - sourceField: replenishmentMax
+          targetField: maximumReplenishmentUnits
+        - sourceField: replenishmentMin
+          targetField: minimumReplenishmentUnits
+        - sourceField: assortmentRank
+           targetField: assortmentRank
+        - sourceField: recommendedFacings
+          targetField: recommendedNumberOfFacings
+        - sourceField: assortmentStrategy
+          targetField: assortmentStrategy
+        - sourceField: assortmentTactic
+          targetField: assortmentTactic
+        - sourceField: assortmentReason
+          targetField: assortmentReason
+        - sourceField: assortmentAction
+          targetField: assortmentAction
+        - sourceField: partID
+          targetField: partIdentification
+        - sourceField: numberofPositions
+          targetField: numberofPositions
+        - sourceField: clusterName
+          targetField: clusterName
+        - sourceField: targetDistributionStores
+          targetField: targetDistributionStores
+        - sourceField: targetDistributionPrcnt
+          targetField: targetDistributionPercentage
+        - sourceField: assortmentNote
+          targetField: assortmentNote
+        - sourceField: capacityUnrestricted
+          targetField: capacityUnrestrictedUnits
+        - sourceField: customData
+          targetField: customData
+        - sourceField: recommendedOrientation
+          targetField: recommendedOrientation
+        - sourceField: recommendedMerchStyle
+          targetField: recommendedMerchandisingStyle
+        - sourceField: ignoreRecommendations
+          targetField: ignoreRecommendations
+        - sourceField: priority
+          targetField: priority
+        - sourceField: priorityDesc
+          targetField: priorityDescription
+        - sourceField: forceList
+          targetField: forceList
+        - sourceField: recommendedChange
+          targetField: recommendedChange
+        - sourceField: assortmentCDT
+          targetField: assortmentCDT
+        - sourceField: pGReasons
+          targetField: pGReasons
+        - sourceField: pGMaxStageReduce
+          targetField: planogramMaximumStageReduce
+        - sourceField: pGMaxStageFillOut
+          targetField: planogramMaximumStageFillout
+    - targetSegment: planogramPosition
+      sourceSegment: Position
+      fieldMapping:
+      - sourceField: dBParentPlanogramKey
+        targetField: dBParentPlanogramKey
+      segmentMapping:
+      - targetSegment: positionDetails
+        fieldMapping:
+        - sourceField: dBParentFixtureKey
+          targetField: dBParentFixtureKey
+        - sourceField: dBParentProductKey
+          targetField: dBParentProductKey
+        - sourceField: dBParentPegKey
+          targetField: dBParentPegKey
+        - sourceField: dBKey
+          targetField: dBKey
+        - sourceField: x
+          targetField: horizontalCoordinate
+        - sourceField: width
+          targetField: width
+        - sourceField: y
+          targetField: verticalCoordinate
+        - sourceField: height
+          targetField: height
+        - sourceField: z
+          targetField: depthCoordinate
+        - sourceField: z
+          targetField: depthCoordinate
+        - sourceField: depth
+          targetField: depth
+        - sourceField: slope
+          targetField: slope
+        - sourceField: angle
+          targetField: angle
+        - sourceField: roll
+          targetField: roll
+        - sourceField: merchStyle
+          targetField: merchandisingStyle
+        - sourceField: hFacings
+          targetField: horizontalFacings
+        - sourceField: vFacings
+          targetField: verticalFacings
+        - sourceField: dFacings
+          targetField: depthFacings
+        - sourceField: xCapNum
+          targetField: horizontalCapNumber
+        - sourceField: xCapNested
+          targetField: isHorizontalCapNested
+        - sourceField: xCapReversed
+          targetField: isHorizontalCapReversed
+        - sourceField: xCapOrientation
+          targetField: horizontalCapOrientation
+        - sourceField: yCapNum
+          targetField: verticalCapNumber
+        - sourceField: yCapNested
+          targetField: isVerticalCapNested
+        - sourceField: yCapReversed
+          targetField: isVerticalCapReversed
+        - sourceField: yCapOrientation
+          targetField: verticalCapOrientation
+        - sourceField: zCapNum
+          targetField: depthCapNumber
+        - sourceField: zCapNested
+          targetField: isDepthCapNested
+        - sourceField: zCapReversed
+          targetField: isDepthCapReversed
+        - sourceField: zCapOrientation
+          targetField: depthCapOrientation
+        - sourceField: orientation
+          targetField: orientation
+        - sourceField: merchStyleWidth
+          targetField: merchandisingStyleWidth
+        - sourceField: merchStyleHeight
+          targetField: merchandisingStyleHeight
+        - sourceField: merchStyleDepth
+          targetField: merchandisingStyleDepth
+        - sourceField: fullWidth
+          targetField: fullWidth
+        - sourceField: fullHeight
+          targetField: fullHeight
+        - sourceField: fullDepth
+          targetField: fullDepth
+        - sourceField: xSubUnits
+          targetField: horizontalSubUnits
+        - sourceField: ySubUnits
+          targetField: verticalSubUnits
+        - sourceField: zSubUnits
+          targetField: depthSubUnits
+        - sourceField: pegID
+          targetField: pegIdentification
+        - sourceField: row
+          targetField: row
+        - sourceField: col
+          targetField: col
+        - sourceField: manualUnits
+          targetField: manualUnits
+        - sourceField: rankX
+          targetField: horizontalRank
+        - sourceField: rankY
+          targetField: verticalRank
+        - sourceField: rankZ
+          targetField: depthRank
+        - sourceField: pegSpan
+          targetField: pegSpan
+        - sourceField: alwaysFloat
+          targetField: isPositionFloating
+        - sourceField: merchXMin
+          targetField: merchandiseXMinimum
+        - sourceField: merchXMax
+          targetField: merchandiseXMaximum
+        - sourceField: merchXUprights
+          targetField: merchandiseXUprights
+        - sourceField: merchXCaps
+          targetField: merchandiseXCaps
+        - sourceField: merchXPlacement
+          targetField: merchandiseXPlacement
+        - sourceField: merchXNumber
+          targetField: merchandiseXNumber
+        - sourceField: merchXDirection
+          targetField: merchandiseXDirection
+        - sourceField: merchYMin
+          targetField: merchandiseYMinimum
+        - sourceField: merchYMax
+          targetField: merchandiseYMaximum
+        - sourceField: merchYUprights
+          targetField: merchandiseYUprights
+        - sourceField: merchYCaps
+          targetField: merchandiseYCaps
+        - sourceField: merchYPlacement
+          targetField: merchandiseYPlacement
+        - sourceField: merchYNumber
+          targetField: merchandiseYNumber
+        - sourceField: merchYSize
+          targetField: merchandiseYSize
+        - sourceField: merchYDirection
+          targetField: merchandiseYDirection
+        - sourceField: merchZMin
+          targetField: merchandiseZMinimum
+        - sourceField: merchZMax
+          targetField: merchandiseZMaximum
+        - sourceField: merchZUprights
+          targetField: merchandiseZUprights
+        - sourceField: merchZCaps
+          targetField: merchandiseZCaps
+        - sourceField: merchZPlacement
+          targetField: merchandiseZPlacement
+        - sourceField: merchZNumber
+          targetField: merchandiseZNumber
+        - sourceField: merchZSize
+          targetField: merchandiseZSize
+        - sourceField: merchZDirection
+          targetField: merchandiseZDirection
+        - sourceField: warning
+          targetField: warning
+        - sourceField: warningNumber
+          targetField: warningNumber
+        - sourceField: locationID
+          targetField: locationIdentification
+        - sourceField: useTargetSpaceX
+          targetField: useHorizontalTargetSpace
+        - sourceField: useTargetSpaceY
+          targetField: useVerticalTargetSpace
+        - sourceField: useTargetSpaceZ
+          targetField: useDepthTargetSpace
+        - sourceField: targetSpaceX
+          targetField: horizontalTargetSpace
+        - sourceField: targetSpaceY
+          targetField: verticalTargetSpace
+        - sourceField: targetSpaceZ
+          targetField: depthTargetSpace
+        - sourceField: capacity
+          targetField: capacity
+        - sourceField: units
+          targetField: units
+        - sourceField: linear
+          targetField: linearSpace
+        - sourceField: square
+          targetField: squareSpace
+        - sourceField: cubic
+          targetField: cubicSpace
+        - sourceField: targetInventory
+          targetField: targetInventory
+        - sourceField: facings
+          targetField: facings
+        - sourceField: segment
+          targetField: segment
+        - sourceField: firstSegment
+          targetField: firstSegment
+        - sourceField: lastSegment
+          targetField: lastSegment
+        - sourceField: imageSource
+          targetField: imageSource
+        - sourceField: pegIDUsed
+          targetField: pegIdentifierUsed
+        - sourceField: replenishmentMax
+          targetField: replenishmentMaximum
+        - sourceField: replenishmentMin
+          targetField: replenishmentMinimum
+        - sourceField: shapeID
+          targetField: shapeIdentification
+        - sourceField: bitmapIDOverride
+          targetField: pictureIdentificationOverride
+        - sourceField: hideIfPrinting
+          targetField: hideIfPrinting
+        - sourceField: partID
+          targetField: partIdentification
+        - sourceField: bitmapIDOverrideUnit
+          targetField: pictureIdentificationOverrideUnit
+        - sourceField: capacityUnrestricted
+          targetField: capacityUnrestricted
+        - sourceField: automaticModel
+          targetField: automaticModel
+        - sourceField: customData
+          targetField: customData
+        - sourceField: xCapWithUnits
+          targetField: isHorizontallyCapped
+        - sourceField: yCapWithUnits
+          targetField: isVerticallyCapped
+        - sourceField: zCapWithUnits
+          targetField: isDepthCapped
+        - sourceField: includedInCalculations
+          targetField: includedInCalculations
+    - targetSegment: planogramProduct
+      sourceSegment: Product
+      fieldMapping:
+      - sourceField: dBKey
+        targetField: dBKey
+      segmentMapping:
+      - targetSegment: productDetails
+        fieldMapping:
+        - sourceField: dBStatus
+          targetField: dBStatus
+        - sourceField: dBKey1
+          targetField: dBKey1
+        - sourceField: dBKey2
+          targetField: dBKey2
+        - sourceField: dBKey3
+          targetField: dBKey3
+        - sourceField: dBKey4
+          targetField: dBKey4
+        - sourceField: dBKey5
+          targetField: dBKey5
+        - sourceField: dBKey6
+          targetField: dBKey6
+        - sourceField: dBKey7
+          targetField: dBKey7
+        - sourceField: dBKey8
+          targetField: dBKey8
+        - sourceField: dBKey9
+          targetField: dBKey9
+        - sourceField: dBKey10
+          targetField: dBKey10
+        - sourceField: name
+          targetField: name
+        - sourceField: uPC
+          targetField: uPC
+        - sourceField: iD
+          targetField: productIdentification
+        - sourceField: width
+          targetField: width
+        - sourceField: height
+          targetField: height
+        - sourceField: depth
+          targetField: depth
+        - sourceField: color
+          targetField: color
+        - sourceField: abbrevName
+          targetField: abbreviatedName
+        - sourceField: size
+          targetField: size
+        - sourceField: uOM
+          targetField: uOM
+        - sourceField: manufacturer
+          targetField: manufacturer
+        - sourceField: category
+          targetField: category
+        - sourceField: supplier
+          targetField: supplier
+        - sourceField: innerPack
+          targetField: innerPack
+        - sourceField: xNesting
+          targetField: xNesting
+        - sourceField: yNesting
+          targetField: yNesting
+        - sourceField: zNesting
+          targetField: zNesting
+        - sourceField: pegholes
+          targetField: pegholes
+        - sourceField: pegholeX
+          targetField: pegholeX
+        - sourceField: pegholeY
+          targetField: pegholeY
+        - sourceField: pegholeWidth
+          targetField: pegholeWidth
+        - sourceField: peghole2X
+          targetField: peghole2X
+        - sourceField: peghole2Y
+          targetField: peghole2Y
+        - sourceField: peghole2Width
+          targetField: peghole2Width
+        - sourceField: peghole3X
+          targetField: peghole3X
+        - sourceField: peghole3Y
+          targetField: peghole3Y
+        - sourceField: peghole3Width
+          targetField: peghole3Width
+        - sourceField: packageStyle
+          targetField: packageStyle
+        - sourceField: pegID
+          targetField: pegIdentification
+        - sourceField: fingerSpaceY
+          targetField: fingerSpaceY
+        - sourceField: jumbleFactor
+          targetField: jumbleFactor
+        - sourceField: price
+          targetField: price
+        - sourceField: caseCost
+          targetField: caseCost
+        - sourceField: taxCode
+          targetField: taxCode
+        - sourceField: unitMovement
+          targetField: unitMovement
+        - sourceField: share
+          targetField: share
+        - sourceField: caseMultiple
+          targetField: minimumCaseMultiple
+        - sourceField: daysSupply
+          targetField: daysSupply
+        - sourceField: combinedPerformanceIndex
+          targetField: combinedPerformanceIndex
+        - sourceField: pegSpan
+          targetField: pegSpan
+        - sourceField: minimumUnits
+          targetField: minimumUnits
+        - sourceField: maximumUnits
+          targetField: maximumUnits
+        - sourceField: shapeID
+          targetField: shapeIdentification
+        - sourceField: bitmapIDOverride
+          targetField: pictureIdentificationOverride
+        - sourceField: trayWidth
+          targetField: trayWidth
+        - sourceField: trayHeight
+          targetField: trayHeight
+        - sourceField: trayDepth
+          targetField: trayDepth
+        - sourceField: trayNumberWide
+          targetField: trayNumberWide
+        - sourceField: trayNumberHigh
+          targetField: trayNumberHigh
+        - sourceField: trayNumberDeep
+          targetField: trayNumberDeep
+        - sourceField: trayTotalNumber
+          targetField: trayTotalNumber
+        - sourceField: trayMaxHigh
+          targetField: trayMaxHigh
+        - sourceField: caseWidth
+          targetField: caseWidth
+        - sourceField: caseHeight
+          targetField: caseHeight
+        - sourceField: caseDepth
+          targetField: caseDepth
+        - sourceField: caseNumberWide
+          targetField: caseNumberWide
+        - sourceField: caseNumberHigh
+          targetField: caseNumberHigh
+        - sourceField: caseNumberDeep
+          targetField: caseNumberDeep
+        - sourceField: caseTotalNumber
+          targetField: caseTotalNumber
+        - sourceField: caseMaxHigh
+          targetField: caseMaxHigh
+        - sourceField: displayWidth
+          targetField: displayWidth
+        - sourceField: displayHeight
+          targetField: displayHeight
+        - sourceField: displayDepth
+          targetField: displayDepth
+        - sourceField: displayNumberWide
+          targetField: displayNumberWide
+        - sourceField: displayNumberHigh
+          targetField: displayNumberHigh
+        - sourceField: displayNumberDeep
+          targetField: displayNumberDeep
+        - sourceField: displayTotalNumber
+          targetField: displayTotalNumber
+        - sourceField: displayMaxHigh
+          targetField: displayMaxHigh
+        - sourceField: alternateWidth
+          targetField: alternateWidth
+        - sourceField: alternateHeight
+          targetField: alternateHeight
+        - sourceField: alternateDepth
+          targetField: alternateDepth
+        - sourceField: alternateNumberWide
+          targetField: alternateNumberWide
+        - sourceField: alternateNumberHigh
+          targetField: alternateNumberHigh
+        - sourceField: alternateNumberDeep
+          targetField: alternateNumberDeep
+        - sourceField: alternateTotalNumber
+          targetField: alternateTotalNumber
+        - sourceField: alternateMaxHigh
+          targetField: alternateMaxHigh
+        - sourceField: looseWidth
+          targetField: looseWidth
+        - sourceField: looseHeight
+          targetField: looseHeight
+        - sourceField: looseDepth
+          targetField: looseDepth
+        - sourceField: looseNumberWide
+          targetField: looseNumberWide
+        - sourceField: looseNumberHigh
+          targetField: looseNumberHigh
+        - sourceField: looseNumberDeep
+          targetField: looseNumberDeep
+        - sourceField: looseTotalNumber
+          targetField: totalLooseNumber
+        - sourceField: looseMaxHigh
+          targetField: looseMaxHigh
+        - sourceField: merchXMin
+          targetField: merchandiseXMinimum
+        - sourceField: merchXMax
+          targetField: merchandiseXMaximum
+        - sourceField: merchXUprights
+          targetField: merchandiseXUprights
+        - sourceField: merchXCaps
+          targetField: merchandiseXMinimum
+        - sourceField: merchXPlacement
+          targetField: merchandiseXPlacement
+        - sourceField: merchXNumber
+          targetField: merchandiseXNumber
+        - sourceField: merchXSize
+          targetField: merchandiseXSize
+        - sourceField: merchXDirection
+          targetField: merchandiseXDirection
+        - sourceField: merchYMin
+          targetField: merchandiseYMinimum
+        - sourceField: merchYMax
+          targetField: merchandiseYMaximum
+        - sourceField: merchYUprights
+          targetField: merchandiseYUprights
+        - sourceField: merchYCaps
+          targetField: merchandiseYCaps
+        - sourceField: merchYPlacement
+          targetField: merchandiseYPlacement
+        - sourceField: merchYNumber
+          targetField: merchandiseYNumber
+        - sourceField: merchYSize
+          targetField: merchandiseYSize
+        - sourceField: merchYDirection
+          targetField: merchandiseYDirection
+        - sourceField: merchZMin
+          targetField: merchandiseZMinimum
+        - sourceField: merchZMax
+          targetField: merchandiseZMaximum
+        - sourceField: merchZUprights
+          targetField: merchandiseZUprights
+        - sourceField: merchZCaps
+          targetField: merchandiseZCaps
+        - sourceField: merchZPlacement
+          targetField: merchandiseZPlacement
+        - sourceField: merchZNumber
+          targetField: merchandiseZNumber
+        - sourceField: merchZSize
+          targetField: merchandiseZSize
+        - sourceField: merchZDirection
+          targetField: merchandiseZDirection
+        - sourceField: unitCost
+          targetField: unitCost
+        - sourceField: minimumSqueezeFactorX
+          targetField: minimumSqueezeFactorX
+        - sourceField: minimumSqueezeFactorY
+          targetField: minimumSqueezeFactorY
+        - sourceField: minimumSqueezeFactorZ
+          targetField: minimumSqueezeFactorZ
+        - sourceField: maximumSqueezeFactorX
+          targetField: maximumSqueezeFactorX
+        - sourceField: maximumSqueezeFactorY
+          targetField: maximumSqueezeFactorY
+        - sourceField: maximumSqueezeFactorZ
+          targetField: maximumSqueezeFactorZ
+        - sourceField: fillPattern
+          targetField: fillPattern
+        - sourceField: xFilename
+          targetField: xFilename
+        - sourceField: brand
+          targetField: brandName
+        - sourceField: subcategory
+          targetField: subcategory
+        - sourceField: weight
+          targetField: weight
+        - sourceField: planogramAlias
+          targetField: planogramAlias
+        - sourceField: frontOverhang
+          targetField: frontOverhang
+        - sourceField: fingerSpaceX
+          targetField: fingerSpaceX
+        - sourceField: status
+          targetField: status
+        - sourceField: dateCreated
+          targetField: dateTimeCreated
+        - sourceField: dateModified
+          targetField: dateTimeModified
+        - sourceField: datePending
+          targetField: dateTimePending
+        - sourceField: dateEffective
+          targetField: dateTimeEffective
+        - sourceField: dateFinished
+          targetField: dateTimeFinished
+        - sourceField: createdBy
+          targetField: createdBy
+        - sourceField: modifiedBy
+          targetField: modifiedBy
+        - sourceField: transparency
+          targetField: transparency
+        - sourceField: peakSafetyFactor
+          targetField: peakSafetyFactor
+        - sourceField: backroomStock
+          targetField: backroomStock
+        - sourceField: deliverySchedule
+          targetField: deliverySchedule
+        - sourceField: dBDateEffectiveFrom
+          targetField: dBDateTimeEffectiveFrom
+        - sourceField: dBDateEffectiveTo
+          targetField: dBDateTimeEffectiveTo
+        - sourceField: dBVersionKey
+          targetField: dBVersionKey
+        - sourceField: partID
+          targetField: partIdentification
+        - sourceField: authorityLevel
+          targetField: authorityLevel
+        - sourceField: bitmapIDOverrideUnit
+          targetField: pictureIdentificationOverrideUnit
+        - sourceField: modelFilenameUnit
+          targetField: modelFilenameUnit
+        - sourceField: capacityUnrestricted
+          targetField: capacityUnrestricted
+        - sourceField: defaultMerchStyle
+          targetField: defaultMerchandisingStyle
+        - sourceField: automaticModel
+          targetField: automaticModel
+        - sourceField: customData
+          targetField: customData
+        - sourceField: dBGUID
+          targetField: dBGUID
+        - sourceField: source
+          targetField: source
+        - sourceField: technicalKey
+          targetField: technicalKey
+        - sourceField: squeezeExpandUnitsOnly
+          targetField: squeezeExpandUnitsOnly
+        - sourceField: dBFamilyKey
+          targetField: dBFamilyKey
+        - sourceField: assortmentNote
+          targetField: assortmentNote
+        - sourceField: metaProduct
+          targetField: metaProduct
