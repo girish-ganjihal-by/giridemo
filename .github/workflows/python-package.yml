@@ -1,1 +1,69 @@
 
+name: Python package
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        if [ -f requirements.in ]; then pip install -r requirements.in; fi
+    - name: Lint with flake8
+      run: |
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: install yamale
+      run: |
+        pip install yamale
+    - name: validate yaml files
+      run: |
+        cd pycatmanadapter/schema
+        yamale --schema schema.yaml
+    - name: run Pyinstaller
+      run: |
+        pyinstaller -p pycatmanadapter pycatmanadapter/launch.py
+    - name: run copy command
+      run: |
+        cp -r pycatmanadapter/config_repo  dist/launch/config_repo
+    - name: run copy command
+      run: |
+        mkdir dist/launch/connect
+    - name: run copy command
+      run: |
+        mkdir dist/launch/connect/cps
+    - name: run copy
+      run: |
+        cp -r pycatmanadapter/connect/cps/adapter-cps.json dist/launch/connect/cps/
+    - name: create log folder
+      run: |
+        mkdir dist/launch/log
+    - name: create archived
+      run: |
+        mkdir dist/launch/log/archived
+    - name: copy tar.gz
+      run: |
+        tar -zcvf dist/connect-catman-adapter-exec-linux.tar.gz dist/launch
+    - name: upload executable to github workspace
+      uses: actions/upload-artifact@v1
+      with:
+        name: build
+        path: pycatmanadapter\dist\connect-catman-adapter-exec-linux.tar.gz 
