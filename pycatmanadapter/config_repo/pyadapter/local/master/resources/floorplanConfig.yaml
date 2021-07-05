@@ -1,0 +1,112 @@
+---
+Mappings:
+- modelMapping:
+    sourceModel: Floorplan
+    targetModel: floorplan
+    fieldMapping:
+    - targetField: creationDateTime
+      default: "current time"
+    - targetField: documentActionCode
+      default: "CHANGE_BY_REFRESH"
+    - targetField: documentStatusCode
+      default: "ORIGINAL"
+    - sourceField: dBKey
+      targetField: dBKey
+    - sourceField: dBStatus
+      targetField: dBStatus
+    - sourceField: dBDateEffectiveFrom
+      targetField: dBDateTimeEffectiveFrom
+    - sourceField: dBkey1
+      targetField: dBkey1
+    - sourceField: dBkey2
+      targetField: dBkey2
+    - sourceField: dBkey3
+      targetField: dBkey3
+    - sourceField: dBkey4
+      targetField: dBkey4
+    - sourceField: dBkey5
+      targetField: dBkey5
+    - sourceField: dBkey6
+      targetField: dBkey6
+    - sourceField: dBkey7
+      targetField: dBkey7
+    - sourceField: dBkey8
+      targetField: dBkey8
+    - sourceField: dBkey9
+      targetField: dBkey9
+    - sourceField: dBkey10
+      targetField: dBkey10
+    - sourceField: name
+      targetField: name
+    - sourceField: width
+      targetField: width
+    - sourceField: ceilingHeight
+      targetField: ceilingHeight
+    - sourceField: depth
+      targetField: depth
+    - sourceField: ceilingColor
+      targetField: ceilingColor
+    - sourceField: drawFloor
+      targetField: drawFloorplanFloor
+    - sourceField: floorColor
+      targetField: floorColor
+    - sourceField: drawGrid
+      targetField: drawFloorGrid
+    - sourceField: verticalSpacing
+      targetField: verticalSpacing
+    - sourceField: lineType
+      targetField: lineType
+    - sourceField: gridColor
+      targetField: gridColor
+    - sourceField: numberOfFixtures
+      targetField: numberOfFixtures
+    - sourceField: numberOfDrawings
+      targetField: numberOfDrawings
+    - sourceField: horizontalSpacing
+      targetField: horizontalSpacing
+    - sourceField: fillPattern
+      targetField: fillPattern
+    - sourceField: layoutFileName
+      targetField: layoutFileName
+    - sourceField: notes
+      targetField: notes
+    - sourceField: threeDFloorImage
+      targetField: threeDFloorImage
+    - sourceField: threeDCeilingImage
+      targetField: threeDCeilingImage
+    - sourceField: ceilingTileX
+      targetField: ceilingTileX
+    - sourceField: ceilingTileZ
+      targetField: ceilingTileZ
+    - sourceField: floorTileX
+      targetField: floorTileX
+    - sourceField: floorTileZ
+      targetField: floorTileZ
+    - sourceField: warningsCount
+      targetField: warningsCount
+    - sourceField: dBGUID
+      targetField: dBGUID
+    - sourceField: dBDateEffectiveTo
+      targetField: dBDateTimeEffectiveTo
+    - sourceField: dBVersionKey
+      targetField: dBVersionKey
+    - sourceField: planogramSplitDefault
+      targetField: planogramSplitDefault
+    - sourceField: texturePaths
+      targetField: texturePaths
+    - sourceField: dBFamilyKey
+      targetField: dBFamilyKey
+    - sourceField: dBReplaceKey
+      targetField: dBReplaceKey
+    - sourceField: traceFiles
+      targetField: traceFiles
+    - sourceField: dBParentAccountKey
+      targetField: dBParentAccountKey
+    - sourceField: status1
+      targetField: statusDescription
+    - sourceField: updatedObjects
+      targetField: updatedObjects
+    - sourceField: floorplanGUID
+      targetField: floorplanGUID
+    - sourceField: xMLStream
+      targetField: xMLStream
