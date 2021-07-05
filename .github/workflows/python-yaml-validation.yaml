@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: build executable
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: download git file
       uses: actions/checkout@v2
@@ -17,7 +17,4 @@ jobs:
     - name: validate yaml files
       run: |
         cd pycatmanadapter\schema
-        chcp 65001
-        python
-        x=2
-        print(x)
+        yamale --schema schemaConfig.yaml
