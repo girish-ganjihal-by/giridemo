@@ -18,4 +18,6 @@ jobs:
       run: |
         cd pycatmanadapter\schema
         chcp 65001
-        yamale --schema schemaConfig.yaml  --no-strict
+        python
+        x=2
+        print(x)
