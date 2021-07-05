@@ -16,5 +16,5 @@ jobs:
         pip install yamale
     - name: validate yaml files
       run: |
-        cd pycatmanadapter\schema
+        cd pycatmanadapter/schema
         yamale --schema schemaConfig.yaml
