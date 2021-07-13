@@ -65,7 +65,7 @@ jobs:
     - name: copy tar.gz
       run: |
         tar -zcvf dist/connect-catman-adapter-exec-linux.tar.gz dist/launch
-    - name: upload executable to github workspace
+    - name: upload executable to github work
       uses: actions/upload-artifact@v1
       with:
         name: build
