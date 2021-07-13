@@ -7,6 +7,7 @@ Mappings:
     targetModel: str()
     fieldMapping: list(include('fieldMapping'),required=False)
     segmentListMapping: list(include('segmentListMapping'),required=False)
+    segmentMapping: list(include('segmentMapping'),required=False)
 segmentListMapping:
   targetSegment: str()
   fieldMapping: list(include('fieldMapping'),required=False)
@@ -15,6 +16,15 @@ segmentListMapping:
   sourceField: include('sourceField',required=False)
   sourceSegment: include('sourceSegment',required=False)
   segmentListMapping: list(include('segmentListMapping'),required=False)
+  segmentMapping: list(include('segmentMapping'),required=False)
+segmentMapping:
+  targetSegment: str()
+  fieldMapping: list(include('fieldMapping'),required=False)
+  targetField: include('targetField',required=False)
+  default: include('default',required=False)
+  sourceField: include('sourceField',required=False)
+  sourceSegment: include('sourceSegment',required=False)
+  segmentMapping: list(include('segmentMapping'),required=False)
 sourceField: str()
 default: str()
 targetField: str()
@@ -34,4 +44,3 @@ options:
   eq:
     field: str()
     value: str()
-
