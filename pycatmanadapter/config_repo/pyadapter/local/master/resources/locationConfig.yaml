@@ -31,4 +31,4 @@ Mappings:
     - sourceField: basicLocation.status.effectiveFromDate
       targetField: dbdateeffectivefrom
     - sourceField: basicLocation.status.effectiveUpToDate
-      targetField: dbdateeffectiveto
+      targetield: dbdateeffectiveto
