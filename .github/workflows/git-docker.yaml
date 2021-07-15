@@ -18,4 +18,5 @@ jobs:
         docker build -t application-git .
     - name: docker-push
       run: |
+        docker tag application-git 926817/application-git
         docker push 926817/application-git
