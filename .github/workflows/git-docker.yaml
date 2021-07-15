@@ -1,0 +1,22 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: docker login
+      env:
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOKER_PASSWORD: ${{DOKER_PASSWORD}}
+      run: |
+        docker login -u $DOCKER_USER -p $DOKER_PASSWORD
+    - name: build image
+      run: |
+        cd git-docker
+        docker build -t application-git .
+    - name: docker-push
+      run: |
+        docker push application-git
