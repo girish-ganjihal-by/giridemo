@@ -20,7 +20,6 @@ jobs:
       run: |
         docker tag application-git 926817/application-git
         docker push 926817/application-git
-      container:
-        image: 926817:926817/application-git
-        ports:
-          - 5000:5000
+    container:
+      image: 926817:926817/application-git
+     
