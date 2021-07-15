@@ -1,4 +1,4 @@
-name: CI
+name: Python package
 on:
   push:
     branches: [ master ]
@@ -7,12 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: docker login
-      env:
-        DOCKER_USER: ${{secrets.DOCKER_USER}}
-        DOKER_PASSWORD: ${{secrets.DOKER_PASSWORD}}
-      run: |
-        docker login -u $DOCKER_USER -p $DOKER_PASSWORD
+    - name: Log in to Docker Hub
+      uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+      with:
+        username: ${{ secrets.DOCKER_USER }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
     - name: build image
       run: |
         cd git-docker
