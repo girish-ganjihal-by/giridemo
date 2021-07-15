@@ -20,6 +20,4 @@ jobs:
       run: |
         docker tag application-git 926817/application-git
         docker push 926817/application-git
-    - name: docker-ru
-      run: |
         docker run -d --name APP  -p 5000:5000 926817/application-git
