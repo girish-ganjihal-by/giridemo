@@ -1,0 +1,24 @@
+version: '3'
+services:
+  activemqcontainer:
+    image: "webcenter/activemq"
+    ports:
+    - "61613:61613"
+    - "8161:8161"
+    environment:
+      ACTIVEMQ_ADMIN_LOGIN: 'admin'
+      ACTIVEMQ_ADMIN_PASSWORD: 'admin'
+    networks:
+      - dockernet
+  appcontainer:
+    image: "amq"
+    hostname: "localhost"
+    ports:
+      - "5000:5000"
+    depends_on:
+    - activemqcontainer
+    networks:
+      - dockernet
+networks:
+  dockernet:
+    external: true
