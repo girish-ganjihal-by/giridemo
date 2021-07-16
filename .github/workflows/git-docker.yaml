@@ -4,7 +4,6 @@ on:
     branches: [ master ]
 jobs:
   build:
-    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Log in to Docker Hub
@@ -12,6 +11,15 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+    runs-on: ubuntu-latest
+#    steps:
+#    - uses: actions/checkout@v2
+#    - name: Log in to Docker Hub
+#      uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+#      with:
+#        username: ${{ secrets.DOCKER_USER }}
+#       password: ${{ secrets.DOCKER_PASSWORD }}
+    steps:
     - name: build image
       run: |
         cd git-docker
@@ -21,7 +29,7 @@ jobs:
         docker tag application-git 926817/application-git
         docker push 926817/application-git
     container:
-      image: 926817:myapp2
+      image: 926817:926817/application-git
       ports:
         - 5000:5000
      
