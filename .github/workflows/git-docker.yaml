@@ -11,7 +11,7 @@ jobs:
     - name: curl
       uses: wei/curl@master
       with:
-        args: http://google.com/
+        args: http://localhost:5000/
     runs-on: ubuntu-latest
     container:
       image: 926817/application-git
