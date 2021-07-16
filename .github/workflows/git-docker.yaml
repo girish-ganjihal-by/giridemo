@@ -4,6 +4,10 @@ on:
     branches: [ master ]
 jobs:
   build:
+    steps:
+    - name: docker-push
+      run: |
+        echo hi
     runs-on: ubuntu-latest
     container:
       image: 926817/application-git
