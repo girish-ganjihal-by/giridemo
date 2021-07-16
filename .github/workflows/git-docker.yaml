@@ -19,15 +19,6 @@ jobs:
 #      with:
 #        username: ${{ secrets.DOCKER_USER }}
 #       password: ${{ secrets.DOCKER_PASSWORD }}
-    steps:
-    - name: build image
-      run: |
-        cd git-docker
-        docker build -t application-git .
-    - name: docker-push
-      run: |
-        docker tag application-git 926817/application-git
-        docker push 926817/application-git
     container:
       image: 926817:926817/application-git
       ports:
