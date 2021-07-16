@@ -8,6 +8,7 @@ jobs:
     - name: docker-push
       run: |
         echo hiu
+        docker inspect 926817/application-git
     - name: curl
       uses: wei/curl@master
       with:
