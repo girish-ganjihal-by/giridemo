@@ -20,5 +20,5 @@ jobs:
 #        username: ${{ secrets.DOCKER_USER }}
 #       password: ${{ secrets.DOCKER_PASSWORD }}
     container:
-      image: 926817:926817/application-git
+      image: 926817:myapp2
      
