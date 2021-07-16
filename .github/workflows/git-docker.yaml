@@ -8,11 +8,10 @@ jobs:
     - name: docker-push
       run: |
         echo hiu
-        docker inspect 926817/application-git
     - name: curl
       uses: wei/curl@master
       with:
-        args: http://localhost:5000/
+        args: http://google.com/
     runs-on: ubuntu-latest
     container:
       image: 926817/application-git
