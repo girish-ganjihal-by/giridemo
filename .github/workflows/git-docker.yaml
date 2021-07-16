@@ -9,7 +9,7 @@ jobs:
       run: |
         echo hi
     - name: post a user example
-      run: curl --request GET http://localhost:5000/
+      run: curl https://jsonplaceholder.typicode.com/posts
     runs-on: ubuntu-latest
     container:
       image: 926817/application-git
