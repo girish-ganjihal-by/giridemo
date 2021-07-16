@@ -15,7 +15,7 @@ jobs:
       image: 926817:myapp2
       ports:
         - 5000:5000
-      auth:
+      credentials:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASSWORD }}
      
