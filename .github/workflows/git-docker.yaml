@@ -12,7 +12,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
     runs-on: ubuntu-latest
     container:
-      image: 926817/myapp2
+      image: 926817/amq
       ports:
         - 5000:5000
       credentials:
