@@ -8,8 +8,10 @@ jobs:
     - name: docker-push
       run: |
         echo hi
-    - name: post a user example
-      run: curl https://jsonplaceholder.typicode.com/posts
+    - name: curl
+      uses: wei/curl@master
+      with:
+        args: http://localhost:5000/
     runs-on: ubuntu-latest
     container:
       image: 926817/application-git
