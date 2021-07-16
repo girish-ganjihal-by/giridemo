@@ -21,6 +21,4 @@ jobs:
 #       password: ${{ secrets.DOCKER_PASSWORD }}
     container:
       image: 926817:926817/application-git
-      ports:
-        - 5000:5000
      
