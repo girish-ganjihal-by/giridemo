@@ -8,6 +8,9 @@ jobs:
     - name: docker-push
       run: |
         echo hii
+        cd git-docker
+    - name: Start test server
+      run: docker-compose up 
     - name: curl
       uses: wei/curl@master
       with:
