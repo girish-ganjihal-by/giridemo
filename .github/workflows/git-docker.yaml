@@ -5,9 +5,7 @@ on:
 jobs:
   build:
     steps:
-    - name: docker-push
-      run: |
-        echo hii
+    - uses: actions/checkout@v2
     - name: Start test server
       run: |
         cd git-docker
