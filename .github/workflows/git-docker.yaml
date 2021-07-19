@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: docker-push
       run: |
-        echo hiu
+        echo hii
     - name: curl
       uses: wei/curl@master
       with:
