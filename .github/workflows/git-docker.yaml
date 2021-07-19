@@ -14,7 +14,7 @@ jobs:
         args: http://localhost:5000/
     runs-on: ubuntu-latest
     container:
-      image: 926817/application-git
+      image: 926817/myapp2
       ports:
         - 5000:5000
       credentials:
