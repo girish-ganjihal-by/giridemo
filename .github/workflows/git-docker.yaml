@@ -13,10 +13,11 @@ jobs:
       with:
         args: http://localhost:5000/
     runs-on: ubuntu-latest
-    container: 
-      image: 926817/application-git
-      ports:
-        - 5000:5000
-      credentials:
+    services:
+      APPPP:
+        image: myapp2
+        ports:
+          - 5000:5000
+        credentials:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASSWORD }}
